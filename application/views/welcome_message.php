@@ -69,7 +69,7 @@
 <div id="container">
 	<h1>Welcome to CodeIgniter funcionara ????!</h1>
 
-	<h1>Leen esto????</h1>
+	<h1>Leen esto???? ESTOY AQUI XD</h1>
 	<div id="body">
 		<p>The XD page you are looking at is being generated dynamically by CodeIgniter.</p>
 
