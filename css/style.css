@@ -1,0 +1,470 @@
+#prueba_ci{
+    margin-top: 10px;
+    color: red;
+    font-size: 16px;
+}
+#footer{
+    margin-top: 50 px;
+    height: 50px;
+    background-color: firebrick;
+    color: white;
+}
+
+#header{
+    height: 40px;
+    background-color: #D8D8BF;
+    color: crimson;
+}
+#center{
+display:block;
+}
+header h2{
+text-align:center;}
+
+body {
+background-color:white;
+}
+caption{
+    caption-side:top;
+    margin-bottom:20px;
+}
+.fondo{
+   background-image:url("../Images/turismo.jpg");
+width:150px;
+}
+.renglon{
+    color:white;
+    background-color:#6996d3;
+}
+#atd{
+    margin:0 0 0 auto;
+     background-image:url("../Images/turismo.jpg");
+   
+}
+.atc{
+    margin:0 auto 0 auto;
+    
+}
+table{
+    font-family:amaranth,verdana;
+    margin-top:50px;
+    margin-bottom:50px;
+ 
+}
+th{
+    color:#05316d;
+    
+    
+}
+th, td{
+    font-family:amaranth,verdana;
+  
+   
+   
+    padding:3px;
+}
+ul{
+    list-style-type:square;
+    list-style-position:outside;
+    font-family:amaranth,verdana;
+}
+ #iul{
+    list-style-image:url("../Images/ok.png");
+    font-family:amaranth,verdana;
+}
+ol{
+    font-family:amaranth,verdana;
+}
+#ver{
+    color:#3bda00;
+}
+hr{
+
+    background:url("../Images/hrnaranja.png");
+
+    height:76px;
+
+    background-repeat:no-repeat;
+
+    width:600px;
+
+    border:none;
+
+}
+
+
+strong{
+
+    color:#3bda00;
+
+}
+
+em {
+
+   color:#FF9900; 
+
+}
+
+h3{
+
+    color:#ff6200;
+    font-family:jolly,amaranthb,verdana;
+	text-align:center;
+	font-size:18px;
+
+}
+
+#img1{
+
+ float:right;
+       margin-left:30px;
+      border:none;
+	  }
+
+
+#img2{
+
+ display: left;
+      margin-left: 30px;
+      margin-right: auto;
+      border:none;
+ height:177px;
+ width:350px;
+}
+
+#img{
+
+ display: block;
+      margin-left: auto;
+      margin-right: auto;
+      border:none;
+ height:202px;
+ width: 940px;
+         
+
+}
+
+
+
+#sub{
+
+    text-align:center;
+
+    color:#05316d;
+
+}
+
+footer p{
+
+    color:#05316d;
+
+    text-align:right;
+
+}
+
+footer a{
+
+text-decoration:none;
+
+    color:#FF6200;
+
+    font-family:Harabara,verdana;
+
+    font-style:italic;
+    font-weight:bold;
+
+}
+
+footer a:visited{
+    color:#6bec3b;
+}
+footer{
+
+    height:50px;
+
+    clear:both;
+
+    font-family:amaranth,verdana;
+
+    width:900px;
+
+    padding:8px;
+
+    margin-left:auto;
+
+    margin-bottom:10px;
+
+    margin-right:auto;
+
+    margin-top:10px;
+
+    border:1px;
+
+    border-style:solid;
+
+    text-align:right;
+
+    border-top-color:#D8D8BF;
+
+    border-bottom-color:White;
+
+    border-left-color:White;
+
+    border-right-color:White;
+
+
+
+    }
+
+#menu{
+
+    width:900px;
+
+    padding:8px;
+
+    margin:auto;
+
+    border:1px;
+
+    border-style:solid;
+
+    border-top-color:#D8D8BF;
+
+    border-bottom-color:White;
+
+    border-left-color:White;
+
+    border-right-color:White;
+
+}
+
+#container{
+
+    width:900px;
+
+    padding:8px;
+
+    margin-left:auto;
+
+    margin-bottom:50px;
+
+    margin-right:auto;
+
+    margin-top:3px;
+
+    border:1px;
+
+    border-style:solid;
+
+    border-color:white;
+
+    }
+	#eh1{
+	
+    margin-top:2px;
+	margin-right:30px;
+    	 float:right;}
+	 
+	 
+	#mlado{
+
+      
+margin:auto;
+     float:right;
+
+     }
+	 
+	
+	#mcentro{
+
+      width:350px;
+    height:60px;
+margin-top:10px;
+     float:none;
+
+     }
+	
+
+a img {
+
+    border:none;
+
+}
+
+a{
+
+    text-decoration:none;
+
+    color:#FF9900;
+
+    font-family:amaranth,verdana;
+
+    font-style:italic;
+    
+
+}
+a:visited{
+    color:#0f4fa8;
+}
+
+
+
+h1{
+    color:#ff6200;
+    font-family:jolly,verdana,sans-serif;
+    text-align:center;
+}
+
+h2{
+
+    color:#0f4fa8;
+
+    font-family:jolly,verdana;
+
+}
+
+dt{
+
+    color:#3bda00;
+
+    font-family:jolly,amaranthb,verdana;
+
+    font-size:medium; 
+
+}
+
+dd{
+
+    color:black;
+
+    font-family:amaranth,verdana;
+
+    font-size:medium;
+
+}
+
+
+
+.pn{
+
+    color:black;
+
+    font-family:AndBasR,verdana,sans-serif;
+
+    text-align:justify;
+
+}
+
+p{
+
+    color:black;
+
+    font-family:AndBasR,verdana,sans-serif;
+
+    text-align:left;
+
+}
+
+.pn2{
+
+    color:black;
+
+    font-family:AndBasR,verdana,sans-serif;
+
+    text-align:center;
+
+}
+
+.pn3{
+
+    color:black;
+
+    font-family:AndBasR,verdana,sans-serif;
+
+    text-align:right;
+
+}
+
+
+
+@font-face
+
+{
+
+    font-family:amaranth;
+
+    src:url("/fonts/Amaranth-webfont.ttf");
+
+    
+
+}
+
+@font-face
+
+{
+
+    font-family:AndBasR;
+
+    src:url("/fonts/AndBasR-webfont.ttf");
+
+}
+
+@font-face
+
+{
+
+    font-family:Harabara;
+
+    src:url("/fonts/HarabaraHand-webfont.ttf");
+
+}
+
+@font-face
+
+{
+
+    font-family:Josefin;
+
+    src:url("/fonts/JosefinSansStd-Light-webfont.ttf");
+
+}
+
+@font-face
+
+{
+
+    font-family:krazynights;
+
+    src:url"/fonts/krazynights-webfont.ttf");
+
+}
+
+@font-face
+
+{
+
+    font-family:amaranthb;
+
+    src:url("/fonts/Amaranth-Bold-webfont.ttf");
+
+}
+
+@font-face
+
+{
+
+    font-family:jolly;
+
+    src:url("/fonts/Jolly.ttf");
+
+}
+
+fieldset{
+    width:50%;
+
+    padding:10px;
+
+    font-family:"jolly",verdana;
+	
+	display:block;
+}
