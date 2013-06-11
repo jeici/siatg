@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://localhost:8081/siatg/';
+$config['base_url']	= 'http://localhost:8080/siatg/';
 
 /*
 |--------------------------------------------------------------------------
