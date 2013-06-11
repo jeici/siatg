@@ -1,45 +1,195 @@
 <div class="container_12">
     <div class="grid_5 prefix_7">
-	<link rel="stylesheet" href="<?php echo base_url();?>css/stylem.css" type="text/css" media="all">
-      
-        <ul id="nav">
-            <li><a href="http://www.script-tutorials.com/">Home</a></li>
-            <li><a href="http://www.script-tutorials.com/">Tutorials</a>
-                <div>
-                    <ul>
-                        <li><a href="http://www.script-tutorials.com/category/html-css/">HTML / CSS</a></li>
-                        <li><a href="http://www.script-tutorials.com/category/jquery/">JS / jQuery</a></li>
-                        <li><a href="http://www.script-tutorials.com/category/php/">PHP</a></li>
-                        <li><a href="http://www.script-tutorials.com/category/mysql/">MySQL</a></li>
-                        <li><a href="http://www.script-tutorials.com/category/xslt/">XSLT</a></li>
-                        <li><a href="http://www.script-tutorials.com/category/ajax/">Ajax</a></li>
-                    </ul>
-                </div>
-            </li>
-            <li><a href="http://www.script-tutorials.com/category/resources/">Resources</a>
-                <div>
-                    <ul>
-                        <li><a href="http://www.script-tutorials.com/category/php/">PHP</a></li>
-                        <li><a href="http://www.script-tutorials.com/category/mysql/">MySQL</a></li>
-                        <li><a href="http://www.script-tutorials.com/category/xslt/">XSLT</a></li>
-                        <li><a href="http://www.script-tutorials.com/category/ajax/">Ajax</a></li>
-                    </ul>
-                </div>
-            </li>
-            <li><a href="http://www.script-tutorials.com/category/resources/">Other pages</a>
-                <div>
-                    <ul>
-                        <li><a href="#">Page 1</a></li>
-                        <li><a href="#">Page 2</a></li>
-                        <li><a href="#">Page 3</a></li>
-                        <li><a href="#">Page 4</a></li>
-                        <li><a href="#">Page 5</a></li>
-                    </ul>
-                </div>
-            </li>
-         
-            <li class="pad"></li>
-        </ul>
+	    <link rel="stylesheet" href="<?php echo base_url();?>css/jMenu.jquery.css" type="text/css" />
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script type="text/javascript" src="<?php echo base_url();?>js/jquery-ui.js"></script>
+        <script type="text/javascript" src="<?php echo base_url();?>js/jMenu.jquery.js"></script>
    
+        <ul id="jMenu">
+            <li>
+                <a class="fNiv">Category 1</a>
+                <ul>
+                    <li class="arrow"></li>
+                    <li>
+                        <a>Category 1.2</a>
+                        <ul>
+                            <li><a>Category 1.3</a></li>
+                            <li><a>Category 1.3</a></li>
+                            <li><a>Category 1.3</a></li>
+                            <li><a>Category 1.3</a></li>
+                            <li>
+                                <a>Category 1.3</a>
+                                <ul>
+                                    <li><a>Category 1.4</a></li>
+                                    <li><a>Category 1.4</a></li>
+                                    <li><a>Category 1.4</a></li>
+                                    <li>
+                                        <a>Category 1.4</a>
+                                        <ul>
+                                            <li><a>Category 1.5</a></li>
+                                            <li><a>Category 1.5</a></li>
+                                            <li>
+                                                <a>Category 1.5</a>
+                                                <ul>
+                                                    <li><a>Category 1.6</a></li>
+                                                    <li><a>Category 1.6</a></li>
+                                                    <li><a>Category 1.6</a></li>
+                                                    <li><a>Category 1.6</a></li>
+                                                    <li><a>Category 1.6</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a>Category 1.4</a></li>
+                                    <li><a>Category 1.4</a></li>
+                                </ul>
+                            </li>
+                            <li><a>Category 1.3</a></li>
+                        </ul>
+                    </li>
+                    <li><a>Category 1.2</a></li>
+                    <li>
+                        <a>Category 1.2</a>
+                        <ul>
+                            <li><a>Category 1.3</a></li>
+                            <li>
+                                <a>Category 1.3</a>
+                                <ul>
+                                    <li><a>Category 1.4</a></li>
+                                    <li><a>Category 1.4</a></li>
+                                    <li><a>Category 1.4</a></li>
+                                    <li><a>Category 1.4</a></li>
+                                    <li><a>Category 1.4</a></li>
+                                    <li><a>Category 1.4</a></li>
+                                    <li><a>Category 1.4</a></li>
+                                    <li><a>Category 1.4</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a>Category 1.2</a></li>
+                </ul>
+            </li>
 
+            <li>
+                <a class="fNiv">Category 2</a>
+                <ul>
+                    <li class="arrow"></li>
+                    <li>
+                        <a>Category 2.2</a>
+                        <ul>
+                            <li><a>Category 2.3</a></li>
+                            <li><a>Category 2.3</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a>Category 2.2</a>
+                        <ul>
+                            <li><a>Category 2.3</a></li>
+                            <li><a>Category 2.3</a></li>
+                            <li><a>Category 2.3</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a>Category 2.2</a>
+                        <ul>
+                            <li><a>Category 2.3</a></li>
+                            <li><a>Category 2.3</a></li>
+                            <li><a>Category 2.3</a></li>
+                            <li><a>Category 2.3</a></li>
+                            <li><a>Category 2.3</a></li>
+                            <li><a>Category 2.3</a></li>
+                        </ul>
+                    </li>
+                    <li><a>Category 2.2</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a class="fNiv">Category 3</a>
+                <ul>
+                    <li class="arrow"></li>
+                    <li>
+                        <a>Category 3.2</a>
+                        <ul>
+                            <li><a>Category 3.3</a></li>
+                            <li><a>Category 3.3</a></li>
+                            <li><a>Category 3.3</a></li>
+                            <li><a>Category 3.3</a></li>
+                            <li><a>Category 3.3</a></li>
+                            <li><a>Category 3.3</a></li>
+                            <li><a>Category 3.3</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a>Category 3.2</a>
+                        <ul>
+                            <li><a>Category 3.3</a></li>
+                            <li><a>Category 3.3</a></li>
+                        </ul>
+                    </li>
+                    <li><a>Category 3.2</a></li>
+                    <li><a>Category 3.2</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a class="fNiv">Category 4</a>
+                <ul>
+                    <li class="arrow"></li>
+                    <li><a>Category 4.2</a></li>
+                    <li><a>Category 4.2</a></li>
+                    <li>
+                        <a>Category 4.2</a>
+                        <ul>
+                            <li><a>Category 4.3</a></li>
+                            <li><a>Category 4.3</a></li>
+                            <li><a>Category 4.3</a></li>
+                            <li><a>Category 4.3</a></li>
+                        </ul>
+                    </li>
+                    <li><a>Category 4.2</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a class="fNiv">Category 5</a>
+                <ul>
+                    <li class="arrow"></li>
+                    <li>
+                        <a>Category 5.2</a>
+                        <ul>
+                            <li><a>Category 5.3</a></li>
+                            <li><a>Category 5.3</a></li>
+                            <li><a>Category 5.3</a></li>
+                            <li><a>Category 5.3</a></li>
+                        </ul>
+                    </li>
+                    <li><a>Category 5.2</a></li>
+                    <li><a>Category 5.2</a></li>
+                    <li><a>Category 5.2</a></li>
+                </ul>
+            </li>
+
+            <li><a class="fNiv">Category 6</a></li>
+
+            <li>
+                <a class="fNiv">Category 7</a>
+                <ul>
+                    <li class="arrow"></li>
+                    <li><a>Category 7.2</a></li>
+                    <li><a>Category 7.2</a></li>
+                    <li><a>Category 7.2</a></li>
+                    <li><a>Category 7.2</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $("#jMenu").jMenu();
+            });
+        </script>
+   
+    
 	</div>
