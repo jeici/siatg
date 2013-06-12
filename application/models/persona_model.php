@@ -2,11 +2,19 @@
 if (!defined('BASEPATH'))
 	exit('No direct script access allowed');
 class Persona_model extends CI_Model{
-	function agregar_persona($carnet_p, $id_carr, $id_tele, $name, $ape , $dir, $email, $status, $type){
+
+    function __construct(){
+		parent::__construct();
+		$this ->load->database();
+	}	
+    
+    
+    
+    function agregar_persona($carnet_p,  $name, $ape , $dir, $email, $status, $type){
 		$sql = "select prc_ins_persona('";
 		$sql.=$carnet_p."',";
-		$sql.=$id_carr."',";
-		$sql.=$id_tele."',";
+		//$sql.=$id_carr."',";
+		//$sql.=$id_tele."',";
 		$sql.=$name."',";
 		$sql.=$ape."',";
 		$sql.=$dir."',";
@@ -25,8 +33,11 @@ class Persona_model extends CI_Model{
 		else{
 			$data[]="la consulta no se pudo ejecutar";
 		return $data;
+                
 		} 
 			
 	}
+        
+        
 	
 }
