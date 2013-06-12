@@ -26,7 +26,7 @@ Datos personales
 <div id="container" class="ltr">
 <?php 
         $atributos = array('id'=> 'form_persona', 'class' => 'persona_form');
-        echo form_open('persona/datosenviados',$atributos); //en este caso datosenviados contiene la url que hace el action 
+        echo form_open('persona/verificar_datos_persona',$atributos); //en este caso datosenviados contiene la url que hace el action 
         $data_carnet = array(
               'name'        => 'carnet',
               'id'          => 'id_carnet',
@@ -111,6 +111,7 @@ action="https://jrlopez.wufoo.com.mx/forms/z7x4m1/#public">
 <div>
 
  <?php echo form_input($data_carnet);?>
+ <?php echo form_error('carnet');?>
 </div>
 </li><li id="foli2" class="notranslate      ">
 <label class="desc" id="title2" for="Field2">
@@ -119,12 +120,13 @@ action="https://jrlopez.wufoo.com.mx/forms/z7x4m1/#public">
 </label>
 <span>
 <?php echo form_input($data_nombres);?>
-
+<?php echo form_error('nombres');?>
 <label for="Field2">Nombres</label>
 </span>
 <span>
 <?php echo form_input($data_apellidos);?>
 <?php echo form_label('Apellidos');?>
+<?php echo form_error('apellidos');?>
 </span>
 </li>
 <li id="foli10" 
@@ -135,6 +137,7 @@ Dirección
 
 <div>
 <?php echo form_textarea($data_dir);?>
+<?php echo form_error('direccion');?>
 
 </div>
 </li>
@@ -144,6 +147,7 @@ Correo electrónico
 </label>
 <div>
 <?php echo form_input($data_correo);?>
+<?php echo form_error('correo');?>
 </div>
 </li>
 <li id="foli12" class="notranslate      ">

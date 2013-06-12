@@ -55,16 +55,19 @@ class Persona extends CI_Controller{
 	  }
           
           function verificar_datos_persona(){
-            $this->form_validation->set_rules('carnet','Carnet','required|trim|min_length[5]');
+            $this->form_validation->set_rules('carnet','Carnet','required|trim|min_length[7]');
             $this->form_validation->set_rules('nombres','Nombres','required|trim');
             $this->form_validation->set_rules('apellidos','Apellidos','required|trim'); 
             $this->form_validation->set_rules('direccion','Direccion','required|trim'); 
             $this->form_validation->set_rules('correo','Correo','trim|required|valid_email'); 
-            //$this->form_validation->set_rules('tipo','Tipo','required'); 
+            $this->form_validation->set_message('required','Este campo es requerido');
+            $this->form_validation->set_message('min_length','El número mínimo de caracteres es de 7');
+            $this->form_validation->set_message('valid_email','La dirección de correo no es válida');
             if($this->form_validation->run()==FALSE)
             {
                 $this->index();
             }
+            
         }
         
         
