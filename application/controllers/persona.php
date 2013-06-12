@@ -5,6 +5,7 @@ class Persona extends CI_Controller{
 	{
 		parent::__construct();
 		$this->load->database();
+              //  $this->load->model('persona_model','per');
                 $this->load->helper('form');
                 $this->load->library('form_validation');
 //$this->load->model('persona_model','per',TRUE);
@@ -31,6 +32,39 @@ class Persona extends CI_Controller{
             $data['main_content']='form_persona';
              $data['title']='Ingresar Persona';
             $this->load->view('includes/template',$data); 
+        }
+        
+        function guardar_persona()
+	  {
+	      $carn = $this->input->post('carnet');
+	      $nombs = $this->input->post('nombres');
+	      $apell = $this->input->post('apellidos');
+	      $dire = $this->input->post('direccion');
+	      $mail = $this->input->post('correo');
+	      $state = $this->input->post('estado');
+              $tipe = $this->input->post('tipo');
+	     
+	      
+	      $insert = $this->per->agregar_persona($carn, $nombs, $apell, $dire, $mail, $state, $tipe );
+        
+         foreach ($insert as $valor)
+         {
+            echo $valor->prc_ins_persona;
+            
+         }
+	  }
+          
+          function verificar_datos_persona(){
+            $this->form_validation->set_rules('carnet','Carnet','required|trim|min_length[5]');
+            $this->form_validation->set_rules('nombres','Nombres','required|trim');
+            $this->form_validation->set_rules('apellidos','Apellidos','required|trim'); 
+            $this->form_validation->set_rules('direccion','Direccion','required|trim'); 
+            $this->form_validation->set_rules('correo','Correo','trim|required|valid_email'); 
+            //$this->form_validation->set_rules('tipo','Tipo','required'); 
+            if($this->form_validation->run()==FALSE)
+            {
+                $this->index();
+            }
         }
         
         
