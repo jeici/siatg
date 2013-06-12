@@ -12,8 +12,8 @@ Datos personales
 <meta name="robots" content="index, follow">
 
 <!-- CSS -->
-<link href="css/structure.css" rel="stylesheet">
-<link href="css/form.css" rel="stylesheet">
+<link href="../css/structure.css" rel="stylesheet">
+<link href="../css/form.css" rel="stylesheet">
 
 <!-- JavaScript -->
 <script src="scripts/wufoo.js"></script>
