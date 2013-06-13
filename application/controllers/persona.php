@@ -5,10 +5,10 @@ class Persona extends CI_Controller{
 	{
 		parent::__construct();
 		$this->load->database();
-              //  $this->load->model('persona_model','per');
+              $this->load->model('persona_model','per',TRUE);
                 $this->load->helper('form');
                 $this->load->library('form_validation');
-//$this->load->model('persona_model','per',TRUE);
+                $this->load->model('persona_model','per',TRUE);
 
 	}
 
@@ -18,6 +18,7 @@ class Persona extends CI_Controller{
             $data['main_content']='form_persona';
              $data['title']='Ingresar Persona';
             $this->load->view('includes/template',$data); 
+            
             
            // $data['main_content']='contenido2';// este array hace referencia a la variable $main_content del template.php
            // $data['title']='SISTEMA DE ADMINISTARCION DE TRABAJOS DE GRADUACION';//esta variable se imprime en el header en el tag title
@@ -32,6 +33,7 @@ class Persona extends CI_Controller{
             $data['main_content']='form_persona';
              $data['title']='Ingresar Persona';
             $this->load->view('includes/template',$data); 
+            
         }
         
         function guardar_persona()
@@ -42,11 +44,16 @@ class Persona extends CI_Controller{
 	      $dire = $this->input->post('direccion');
 	      $mail = $this->input->post('correo');
 	      $state = $this->input->post('estado');
-              $tipe = $this->input->post('tipo');
+              $tipe = $this->input->post('Tipo');
 	     
-	      
-	      $insert = $this->per->agregar_persona($carn, $nombs, $apell, $dire, $mail, $state, $tipe );
-        
+              
+              
+              
+              
+              
+	    // $this->verificar_datos_persona();
+	      $insert = $this->per->agregar_persona($carn,1,1,$nombs,$apell,$dire, $mail,$state,$tipe);
+              
          foreach ($insert as $valor)
          {
             echo $valor->prc_ins_persona;

@@ -1,5 +1,3 @@
-
-
 <title>
 Datos personales
 </title>
@@ -26,11 +24,11 @@ Datos personales
 <div id="container" class="ltr">
 <?php 
         $atributos = array('id'=> 'form_persona', 'class' => 'persona_form');
-        echo form_open('persona/verificar_datos_persona',$atributos); //en este caso datosenviados contiene la url que hace el action 
+        echo form_open('persona/guardar_persona',$atributos); //en este caso datosenviados contiene la url que hace el action 
         $data_carnet = array(
               'name'        => 'carnet',
               'id'          => 'id_carnet',
-              'value'       => '',
+              'value'       => set_value('carnet'),
               'maxlength'   => '7',
               'size'        => '15',
              
@@ -39,7 +37,7 @@ Datos personales
         $data_nombres = array(
               'name'        => 'nombres',
               'id'          => 'id_nombre',
-              'value'       => '',
+              'value'       => set_value('nombres'),
               'maxlength'   => '50',
               'size'        => '50',
               
@@ -48,7 +46,7 @@ Datos personales
         $data_apellidos = array(
               'name'        => 'apellidos',
               'id'          => 'id_apellidos',
-              'value'       => '',
+              'value'       => set_value('apellidos'),
               'maxlength'   => '50',
               'size'        => '50',
               
@@ -57,7 +55,7 @@ Datos personales
         $data_dir = array(
               'name'        => 'direccion',
               'id'          => 'id_apellidos',
-              'value'       => '',
+              'value'       => set_value('apellidos'),
               'width'       => '50',
               'rows '       => '10',
               'cols'        => '50',
@@ -68,19 +66,15 @@ Datos personales
         $data_correo = array(
               'name'        => 'correo',
               'id'          => 'id_correo',
-              'value'       => '',
+              'value'       => set_value('correo'),
               'maxlength'   => '50',
               'size'        => '50',
               
               'placeholder' => 'Digite el correo',
             );
-        $data_checkbox = array(
-               'name'        => 'estado',
-               'id'          => 'newestado',
-               'value'       => 'accept',
-               'checked'     => TRUE,
-               'style'       => 'margin:10px',
-               'tabindex'   => '6'
+        $data_options = array(
+                'TRUE'  => 'Activo',
+                'FALSE'  => 'Inactivo',
     );
         $options = array(
                   1  => 'Docente',
@@ -164,8 +158,8 @@ Estado
 <![endif]-->
 <div>
 <span>
-<?php echo form_checkbox($data_checkbox);?>
-<label class="choice" for="Field12">Activo</label>
+<?php echo form_dropdown('estado',$data_options);?>
+
 </span>
 </div>
 </fieldset>
