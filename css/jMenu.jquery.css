@@ -7,7 +7,7 @@
 /* First level */
 .jMenu li {
     display: table-cell;
-    background-color: #322f32;
+    background-color: #9f0013;
     margin: 0;
 }
 
@@ -31,14 +31,14 @@
 }
 
 .jMenu li ul li {
-    background-color: #322f32;
+    background-color: #9f0013;
     display: block;
-    border-bottom: 1px solid #484548;
+    border-bottom: 1px solid #f5001d;
     padding: 0;
 }
 
 .jMenu li ul li.arrow {
-    background-color: #322f32;
+    background-color: #9f0013;
     background-image: url('../../imagenes/arrow_down.png');
     background-repeat: no-repeat;
     background-position: center center;
@@ -58,16 +58,16 @@
 }
 
 .jMenu li ul li a.isParent {
-    background-color: #3a3a3a;
+    background-color: #b72e3e;
     background-image: url('../../imagenes/arrow_right.png');
     background-repeat: no-repeat;
     background-position: center center;
 }
 
 .jMenu li ul li a:hover {
-    background-color: #514c52;
-    border-top: 1px solid #322f32;
-    border-bottom: 1px solid #322f32;
+    background-color: #fa3e54;
+    border-top: 1px solid #9f0013;
+    border-bottom: 1px solid #9f0013;
 }
 
 .left_col {
