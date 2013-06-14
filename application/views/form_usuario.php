@@ -95,6 +95,8 @@ $opciones = array(
 
 $data_carrera=$item;//recupero el array aqui.
 
+$data_nivel=$nivel;//llenar el array de niveles.
+
 
 
 ?>
@@ -175,6 +177,19 @@ Tipo
 </label>
 <div>
 <?php echo form_dropdown('tipo',$opciones,1);?>
+</div>
+</li> 
+
+<li id="foli603" class="notranslate       ">
+<label class="desc" id="title603" for="Field603">
+NIVEL DE ACESSO
+<span id="req_603" class="req">*</span>
+</label>
+<div>
+
+<?php echo form_dropdown('nivel', $data_nivel,1);
+	
+?>
 </div>
 </li> 
 
