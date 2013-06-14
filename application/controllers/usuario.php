@@ -16,12 +16,13 @@ class Usuario extends CI_Controller{
 		
 		//obtengo los id y nombres de la carrera
 		$item=$this->usuario->obtener_carrera();
-		
+		$niveles=$this->usuario->obtener_nivel();
 		$data['title']='SISTEMA DE ADMINISTRACION DE TRABAJOS DE GRADUACION';//esta variable se imprime en el
 		//header en el tag title
 		$data['main_content']='form_usuario';
 		$data['title']='Ingresar Usuario';
 		$data['item']=$item; //asigno el array dentro de la variable data
+		$data['nivel']=$niveles; //asigno el array nivel dentro de la variable data
 		$this->load->view('includes/template2',$data);
 
 
@@ -34,11 +35,14 @@ class Usuario extends CI_Controller{
 	}
 	function ingresar_usuario(){
 		$item=$this->usuario->obtener_carrera();
+		$niveles=$this->usuario->obtener_nivel();
 		$data['title']='SISTEMA DE ADMINISTRACION DE TRABAJOS DE GRADUACION';//esta variable se imprime en el
 		//header en el tag title
 		$data['main_content']='form_usuario';
 		$data['title']='Ingresar Usuario';
-		$this->load->view('includes/template',$data);
+		$data['item']=$item; //asigno el array dentro de la variable data
+		$data['nivel']=$niveles; //asigno el array nivel dentro de la variable data
+		$this->load->view('includes/template2',$data);
 
 	}
 
@@ -53,6 +57,7 @@ class Usuario extends CI_Controller{
 		$status = $this->input->post('estado');
 		$carrera=$this->input->post('carrera');
 		$tipo = $this->input->post('tipo');
+		$nivel=$this->input->post('nivel');
 
 
 
@@ -60,7 +65,7 @@ class Usuario extends CI_Controller{
 
 
 		// $this->verificar_datos_persona();
-		$insert = $this->usuario->agregar_usuario($nombre,$apellido,$dir,$email,$nick,$pass,$status,$carrera,$tipo);
+		$insert = $this->usuario->agregar_usuario($nombre,$apellido,$dir,$email,$nick,$pass,$status,$carrera,$tipo,$nivel);
 
 		foreach ($insert as $valor)
 		{
