@@ -10,15 +10,15 @@ class Usuario_model extends CI_Controller{
 
 
 
-	function agregar_usuario($nombre,$apellido,$dir,$email,$nick,$pass,$status,$carrera,$tipo){
+	function agregar_usuario($nombre,$apellido,$dir,$email,$nick,$pass,$status,$carrera,$tipo,$nivel){
 		
 		$sql= "SELECT prc_ins_usuario(?,?,?,?,?,?,?,?,?,?);";
 
-		if($tipo==1){
+		/*if($tipo==1){
 			$nivel=1;
 		}else{
 			$nivel=2;
-		}
+		}*/
 		
 		$query = $this->db->query($sql,array($nombre,$apellido,$dir,$email,$nick,$pass,$status,$nivel,$carrera,$tipo));
 
@@ -45,6 +45,15 @@ class Usuario_model extends CI_Controller{
 		}
 
 		return $item;
+	}
+	
+	function obtener_nivel(){
+		$query=$this->db->query("SELECT * FROM nivel;");
+		$niveles=array();
+		foreach($query->result_array() as $campo){
+			$niveles[$campo['id_nivel']]=$campo['tipo'];
+		}
+		return $niveles;
 	}
 	
 
