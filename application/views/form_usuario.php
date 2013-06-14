@@ -87,7 +87,7 @@ $data_options = array(
 		'TRUE'  => 'Activo',
 		'FALSE'  => 'Inactivo',
 );
-$options = array(
+$opciones = array(
 		1  => 'DBA',
 		2  => 'ADMINISTRADOR',
 
@@ -166,13 +166,15 @@ Estado
 </span>
 </div>
 </fieldset>
-</li><li id="foli213" class="notranslate       ">
+</li>
+
+<li id="foli213" class="notranslate       ">
 <label class="desc" id="title213" for="Field213">
 Tipo
 <span id="req_213" class="req">*</span>
 </label>
 <div>
-<?php echo form_dropdown('Tipo', $options,1);?>
+<?php echo form_dropdown('tipo',$opciones,1);?>
 </div>
 </li> 
 
@@ -207,7 +209,7 @@ Contrase&ntilde;a
 <li class="buttons ">
 <div>
 
-<?php echo form_submit('ingresar','Ingresar Persona');?>
+<?php echo form_submit('ingresar','Ingresar Usuario');?>
                     
  </div>
 </li>
