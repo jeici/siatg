@@ -52,7 +52,7 @@ class Usuario extends CI_Controller{
 		$pass= $this->input->post('pass');
 		$status = $this->input->post('estado');
 		$carrera=$this->input->post('carrera');
-		$type = $this->input->post('Tipo');
+		$tipo = $this->input->post('tipo');
 
 
 
@@ -60,13 +60,14 @@ class Usuario extends CI_Controller{
 
 
 		// $this->verificar_datos_persona();
-		$insert = $this->usuario->agregar_usuario($nombre,$apellido,$dir,$email,$nick,$pass,$status,$carrera,$type);
+		$insert = $this->usuario->agregar_usuario($nombre,$apellido,$dir,$email,$nick,$pass,$status,$carrera,$tipo);
 
 		foreach ($insert as $valor)
 		{
 			echo $valor->prc_ins_usuario;
 
 		}
+		
 	}
 
 	function verificar_datos_usuario(){
