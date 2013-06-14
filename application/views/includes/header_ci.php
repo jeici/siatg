@@ -1,4 +1,4 @@
-<div class="container_16 ">
+<div class="container_12 ">
     <div align="center" >
 	    <link rel="stylesheet" href="<?php echo base_url();?>css/jMenu.jquery.css" type="text/css" />
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
@@ -195,3 +195,7 @@
    </div>
     
 	</div>
+	
+	</header>
+     
+    <body> 
