@@ -1,3 +1,4 @@
+
 <title>
 Datos personales
 </title>
@@ -13,6 +14,7 @@ Datos personales
 
 <!-- JavaScript -->
 <script src="../scripts/wufoo.js"></script>
+
 
 <!--[if lt IE 10]>
 <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -82,7 +84,24 @@ Datos personales
                   
                 );
 
-        
+        $data_titulo = array(
+              'name'        => 'titulo',
+              'id'          => 'id_titulo',
+              'value'       => set_value('titulo'),
+              'maxlength'   => '50',
+              'size'        => '50',
+              
+              'placeholder' => 'Digite el Título',
+            );
+        $data_tg = array(
+              'name'        => 'tg',
+              'id'          => 'id_tg',
+              'value'       => set_value('tg'),
+              'maxlength'   => '50',
+              'size'        => '50',
+              
+              'placeholder' => 'Digite el ID de trabajo de Graduación',
+            );
         
         ?>
     
@@ -169,9 +188,32 @@ Tipo
 <span id="req_213" class="req">*</span>
 </label>
 <div>
-<?php echo form_dropdown('Tipo', $options,1);?>
+<select name="Tipo" id="Tipo">
+				
+			  	<option value="1">Docente</option>
+			  	<option value="2">Estudiante</option>
+			  	
+      		</select>
 </div>
 </li> <li class="buttons ">
+
+<!campo que permenace oculto si no se selecciona docente>
+
+<div id="titulo" style="display:none">
+<?php echo form_input($data_titulo);?>
+<?php echo form_error('titulo');?>
+</div>
+
+<!campos que permenace ocultos si no se selecciona estudiante>
+
+<div id="id_tg" style="display:none">
+<?php echo form_input($data_tg);?>
+<?php echo form_error('titulo');?>
+</div>
+    
+    
+    
+    
 <div>
 <?php echo form_submit('ingresar','Ingresar Persona');?>
                     
@@ -182,4 +224,25 @@ Tipo
 </form> 
 
 </div><!--container-->
+<script>
+//funcion para tipo de usuario
+$('#Tipo').change(function(){
+	//muestra campos para bibliotecarios
+	if($(this).val()==1 ){
+        $('#titulo').show();
+        $('#id_tg').hide();
+	}
+    if($(this).val()!=1 && $(this).val()!=2){
+        $('#titulo').hide();
+	}
+	//muestra campos para miembros
+	if($(this).val()==2){
+        $('#id_tg').show();
+        $('#titulo').hide();
+       
+	}
+    
 
+   });
+
+</script>

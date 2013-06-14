@@ -5,7 +5,7 @@ class Persona extends CI_Controller{
 	{
 		parent::__construct();
 		$this->load->database();
-              $this->load->model('persona_model','per',TRUE);
+             // $this->load->model('persona_model','per',TRUE);
                 $this->load->helper('form');
                 $this->load->library('form_validation');
                 $this->load->model('persona_model','per',TRUE);
@@ -38,6 +38,9 @@ class Persona extends CI_Controller{
         
         function guardar_persona()
 	  {
+            
+            
+            //////////////////////////////////////////
 	      $carn = $this->input->post('carnet');
 	      $nombs = $this->input->post('nombres');
 	      $apell = $this->input->post('apellidos');
@@ -45,20 +48,21 @@ class Persona extends CI_Controller{
 	      $mail = $this->input->post('correo');
 	      $state = $this->input->post('estado');
               $tipe = $this->input->post('Tipo');
-	     
-              
+            
+             
               
               
               
               
 	    // $this->verificar_datos_persona();
-	      $insert = $this->per->agregar_persona($carn,1,1,$nombs,$apell,$dire, $mail,$state,$tipe);
-              
+ $insert = $this->per->agregar_persona($carn,1,1,$nombs,$apell,$dire, $mail,$state,$tipe);
+            
          foreach ($insert as $valor)
          {
             echo $valor->prc_ins_persona;
             
          }
+            
 	  }
           
           function verificar_datos_persona(){
@@ -67,6 +71,7 @@ class Persona extends CI_Controller{
             $this->form_validation->set_rules('apellidos','Apellidos','required|trim'); 
             $this->form_validation->set_rules('direccion','Direccion','required|trim'); 
             $this->form_validation->set_rules('correo','Correo','trim|required|valid_email'); 
+            $this->form_validation->set_rules('titulo','Titulo','required|trim'); 
             $this->form_validation->set_message('required','Este campo es requerido');
             $this->form_validation->set_message('min_length','El número mínimo de caracteres es de 7');
             $this->form_validation->set_message('valid_email','La dirección de correo no es válida');
@@ -74,9 +79,47 @@ class Persona extends CI_Controller{
             {
                 $this->index();
             }
+            else{
+            $this->load->model('persona_model');
+            echo 'correcto';
+            }
+          }
+          
+           function saveval_persona(){
+            $this->form_validation->set_rules('carnet','Carnet','required|trim|min_length[7]');
+            $this->form_validation->set_rules('nombres','Nombres','required|trim');
+            $this->form_validation->set_rules('apellidos','Apellidos','required|trim'); 
+            $this->form_validation->set_rules('direccion','Direccion','required|trim'); 
+            $this->form_validation->set_rules('correo','Correo','trim|required|valid_email'); 
+            $this->form_validation->set_rules('titulo','Titulo','required|trim'); 
+            $this->form_validation->set_message('required','Este campo es requerido');
+            $this->form_validation->set_message('min_length','El número mínimo de caracteres es de 7');
+            $this->form_validation->set_message('valid_email','La dirección de correo no es válida');
+            if($this->form_validation->run()==FALSE)
+            {
+                $this->index();
+            }
+            else{
+            $this->load->model('persona_model');
+            echo 'correcto';
+            $carn = $this->input->post('carnet');
+	      $nombs = $this->input->post('nombres');
+	      $apell = $this->input->post('apellidos');
+	      $dire = $this->input->post('direccion');
+	      $mail = $this->input->post('correo');
+	      $state = $this->input->post('estado');
+              $tipe = $this->input->post('Tipo');
+           $insert = $this->per->agregar_persona($carn,1,1,$nombs,$apell,$dire, $mail,$state,$tipe);
             
-        }
-        
+            
+              
+         foreach ($insert as $valor)
+         {
+            echo $valor->prc_ins_persona;
+            
+         }
+            }
+           }
         
 }
 ?>
