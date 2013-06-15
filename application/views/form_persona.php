@@ -65,6 +65,16 @@ Datos personales
               'maxlength'   => '30',
               'placeholder' => 'Digite la dirección',
             ); 
+        
+         $data_tel = array(
+              'name'        => 'telefono',
+              'id'          => 'id_telefono',
+              'value'       => set_value('telefono'),
+              'maxlength'   => '9',
+              'size'        => '50',
+              
+              'placeholder' => 'Digite el Telefono sin guiones',
+            );
         $data_correo = array(
               'name'        => 'correo',
               'id'          => 'id_correo',
@@ -93,7 +103,7 @@ Datos personales
               
               'placeholder' => 'Digite el Título',
             );
-        $data_tg = array(
+       /* $data_tg = array(
               'name'        => 'tg',
               'id'          => 'id_tg',
               'value'       => set_value('tg'),
@@ -101,8 +111,9 @@ Datos personales
               'size'        => '50',
               
               'placeholder' => 'Digite el ID de trabajo de Graduación',
-            );
-        
+            );*/
+        $data_tg=$item;//recupero el array aqui.
+        $data_carrera=$item2;//recupero el array aqui.
         ?>
     
 
@@ -156,8 +167,18 @@ Dirección
 </li>
 <li id="foli11" class="notranslate      ">
 <label class="desc" id="title11" for="Field11">
+Teléfono
+</label>
+<div>
+<?php echo form_input($data_tel);?>
+<?php echo form_error('nombre');?>
+</div>
+</li>
+<li id="foli11" class="notranslate      ">
+<label class="desc" id="title11" for="Field11">
 Correo electrónico
 </label>
+
 <div>
 <?php echo form_input($data_correo);?>
 <?php echo form_error('correo');?>
@@ -167,7 +188,7 @@ Correo electrónico
 <fieldset>
 <![if !IE | (gte IE 8)]>
 <legend id="title12" class="desc">
-Estado
+Estado  <span id="req_2" class="req">*</span>
 </legend>
 <![endif]>
 <!--[if lt IE 8]>
@@ -207,9 +228,22 @@ Tipo
 <!campos que permenace ocultos si no se selecciona estudiante>
 
 <div id="id_tg" style="display:none">
-<?php echo form_input($data_tg);?>
-<?php echo form_error('titulo');?>
+<label class="desc" id="title11" for="Field11">
+Tema Trabajo de Graduación
+</label>
+    
+<?php echo form_dropdown('tg', $data_tg,1);
+//<?php echo form_error('titulo');?>
+<label class="desc" id="title11" for="Field11">
+Carrera
+</label>
+    
+<?php echo form_dropdown('carrera', $data_carrera,1);
+//<?php echo form_error('titulo');?>    
+    
 </div>
+
+
     
     
     

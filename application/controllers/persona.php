@@ -9,16 +9,22 @@ class Persona extends CI_Controller{
                 $this->load->helper('form');
                 $this->load->library('form_validation');
                 $this->load->model('persona_model','per',TRUE);
+              
 
 	}
 
 	function index(){
+            $item=$this->per->obtener_tg();
+            $item2=$this->per->obtener_carrera();
             $data['title']='SISTEMA DE ADMINISTARCION DE TRABAJOS DE GRADUACION';//esta variable se imprime en el 
             //header en el tag title
             $data['main_content']='form_persona';
              $data['title']='Ingresar Persona';
+             $data['item']=$item; //asigno el array dentro de la variable data
+             $data['item2']=$item2;
             $this->load->view('includes/template',$data); 
-            
+             
+             //$this->load->view('includes/template2',$data);
             
            // $data['main_content']='contenido2';// este array hace referencia a la variable $main_content del template.php
            // $data['title']='SISTEMA DE ADMINISTARCION DE TRABAJOS DE GRADUACION';//esta variable se imprime en el header en el tag title
@@ -48,15 +54,18 @@ class Persona extends CI_Controller{
 	      $mail = $this->input->post('correo');
 	      $state = $this->input->post('estado');
               $tipe = $this->input->post('Tipo');
-            
-             
+              $title= $this->input->post('titulo');
+              $trabg = $this->input->post('tg');
+              $telef = $this->input->post('telefono');
+              $car = $this->input->post('carrera');
+              
               
               
               
               
 	    // $this->verificar_datos_persona();
- $insert = $this->per->agregar_persona($carn,1,1,$nombs,$apell,$dire, $mail,$state,$tipe);
-            
+ $insert = $this->per->agregar_persona($carn,$car,1,$nombs,$apell,$dire, $mail,$state,$tipe,$title,$trabg,$telef);
+                                       
          foreach ($insert as $valor)
          {
             echo $valor->prc_ins_persona;
