@@ -58,6 +58,7 @@ class Usuario extends CI_Controller{
 		$carrera=$this->input->post('carrera');
 		$tipo = $this->input->post('tipo');
 		$nivel=$this->input->post('nivel');
+		$tel=$this->input->post('tel');
 
 
 
@@ -65,7 +66,7 @@ class Usuario extends CI_Controller{
 
 
 		// $this->verificar_datos_persona();
-		$insert = $this->usuario->agregar_usuario($nombre,$apellido,$dir,$email,$nick,$pass,$status,$carrera,$tipo,$nivel);
+		$insert = $this->usuario->agregar_usuario($nombre,$apellido,$dir,$email,$nick,$pass,$status,$carrera,$tipo,$nivel,$tel);
 
 		foreach ($insert as $valor)
 		{
@@ -80,6 +81,7 @@ class Usuario extends CI_Controller{
 		$this->form_validation->set_rules('apellidos','Apellidos','required|trim');
 		$this->form_validation->set_rules('direccion','Direccion','required|trim');
 		$this->form_validation->set_rules('correo','Correo','trim|required|valid_email');
+		$this->form_validation->set_rules('tel','Telefono','required|trim|min_length[7]');
 		$this->form_validation->set_message('required','Este campo es requerido');
 		//$this->form_validation->set_message('min_length','El número mínimo de caracteres es de 7');
 		$this->form_validation->set_message('valid_email','La dirección de correo no es válida');
