@@ -10,9 +10,9 @@ class Usuario_model extends CI_Controller{
 
 
 
-	function agregar_usuario($nombre,$apellido,$dir,$email,$nick,$pass,$status,$carrera,$tipo,$nivel){
+	function agregar_usuario($nombre,$apellido,$dir,$email,$nick,$pass,$status,$carrera,$tipo,$nivel,$tel){
 		
-		$sql= "SELECT prc_ins_usuario(?,?,?,?,?,?,?,?,?,?);";
+		$sql= "SELECT prc_ins_usuario(?,?,?,?,?,?,?,?,?,?,?);";
 
 		/*if($tipo==1){
 			$nivel=1;
@@ -20,7 +20,7 @@ class Usuario_model extends CI_Controller{
 			$nivel=2;
 		}*/
 		
-		$query = $this->db->query($sql,array($nombre,$apellido,$dir,$email,$nick,$pass,$status,$nivel,$carrera,$tipo));
+		$query = $this->db->query($sql,array($nombre,$apellido,$dir,$email,$nick,$pass,$status,$nivel,$carrera,$tipo,$tel));
 
 		if($query->num_rows()>0){
 			foreach ($query->result() as $fila){
