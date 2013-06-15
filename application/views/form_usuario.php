@@ -64,6 +64,16 @@ $data_correo = array(
 		'placeholder' => 'Digite el correo',
 );
 
+$data_tel = array(
+		'name'        => 'tel',
+		'id'          => 'id_tel',
+		'value'       => set_value('Telefono'),
+		'maxlength'   => '8',
+		'size'        => '8',
+
+		'placeholder' => 'Telefono',
+);
+
 $data_nick= array(
 	'name' 		=> 'nick',
 	'id'   		=> 'id_nick',
@@ -147,6 +157,15 @@ Correo electrónico
 <div>
 <?php echo form_input($data_correo);?>
 <?php echo form_error('correo');?>
+</div>
+</li>
+<li id="foli800" class="notranslate      ">
+<label class="desc" id="title800" for="Field800">
+Telefono
+</label>
+<div>
+<?php echo form_input($data_tel);?>
+<?php echo form_error('Telefono');?>
 </div>
 </li>
 <li id="foli12" class="notranslate      ">
