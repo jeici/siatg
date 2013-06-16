@@ -19,6 +19,20 @@ Datos Asesoría
 <!--[if lt IE 10]>
 <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
+
+<!-- para la fecha -->
+		<link rel="stylesheet" href="../js/datepicker/jquery-ui.css" />
+		<script src="../js/datepicker/jquery-1.8.3.js"></script>
+		<script src="../js/datepicker/jquery-ui.js"></script>
+		<script>
+			$(function() {
+				$( "#datepicker" ).datepicker();
+				$( "#anim" ).change(function() {
+				  $( "#datepicker" ).datepicker( "option", "showAnim", $( this ).val() );
+				});
+			  });
+		</script>
+		
 </head>
 
 <body id="public">
@@ -37,6 +51,15 @@ Datos Asesoría
               
               'placeholder' => 'Digite la fecha',
             );
+         $data_fecha2 = array(
+         		'name'        => 'datepicker',
+         		'id'          => 'datepicker',
+         		//'value'       => set_value('fecha'),
+         		//'maxlength'   => '15',
+         		'size'        => '30',
+         		'class'		=> 'field text nospin small',
+         		'placeholder' => 'Digite la fecha',
+         );
         $data_hora = array(
               'name'        => 'hora',
               'id'          => 'id_hora',
@@ -103,6 +126,17 @@ Fecha
 <?php //echo form_error('nombre');?>
 </div>
 </li>
+
+<li id="foli103" class="date notranslate      ">
+	<label class="desc" id="title11" for="Field11">
+		Fecha 2
+	</label>
+	
+	<div>
+		<?php echo form_input($data_fecha2);?>
+		<?php //echo form_error('nombre');?>
+	</div>
+</li> 
 <li id="foli11" class="notranslate      ">
 <label class="desc" id="title11" for="Field11">
 Hora
