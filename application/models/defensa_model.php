@@ -13,7 +13,7 @@ class Defensa_model extends CI_Controller{
 	$query= $this->db->query("SELECT * FROM trabajograduacion;");
 		$item1=array();
 		foreach ($query->result_array() as $campo){
-			$item1[$campo['id_trabajog']]=$campo['tema'];	//darle formato al array para que me funcione con el dropdown	
+			$item1[$campo['id_trabajog']]=$campo['tema'];	//darle  formato al array para que me funcione con el dropdown	
 		}
 
 		return $item1;
