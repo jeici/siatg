@@ -92,7 +92,41 @@ class Usuario extends CI_Controller{
 
 	}
 	
+	function seleccionar_tipo(){
+		$data['title']='SISTEMA DE ADMINISTRACION DE TRABAJOS DE GRADUACION';//esta variable se imprime en el
+		//header en el tag title
+		$data['main_content']='form_tipo';
+		$data['title']='Modificar Usuario';
+		$this->load->view('includes/template3',$data);
+		
+	}
 	
+	function recuperar_usuario(){
+		$tipo= $this->input->post('tipo');
+		
+		if($tipo==1){
+			$users= $this->usuario->obtener_dba();
+		}
+		else
+			$users=$this->usuario->obtener_admin();	
+	
+		$data['title']='SISTEMA DE ADMINISTRACION DE TRABAJOS DE GRADUACION';//esta variable se imprime en el
+		//header en el tag title
+		$data['main_content']='form_user';
+		$data['title']='Modificar Usuario';
+		$data['users']=$users;
+		$this->load->view('includes/template4',$data);
+	}
+	
+	function modificar_user(){
+		$id=$this->input->post('id');
+		$data['title']='SISTEMA DE ADMINISTRACION DE TRABAJOS DE GRADUACION';//esta variable se imprime en el
+		//header en el tag title
+		$data['main_content']='form_tipo';
+		$data['title']='Modificar Usuario';
+		$this->load->view('includes/template3',$data);
+		
+	}
 
 }
 ?>
