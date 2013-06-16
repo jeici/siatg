@@ -56,6 +56,17 @@ class Usuario_model extends CI_Controller{
 		return $niveles;
 	}
 	
+	
+	function obtener_admin(){
+		$query=$this->db->query("SELECT * FROM administrador;");
+			return $query->result();
+		
+	}
+	
+	function obtener_dba(){
+		$query=$this->db->query("SELECT * FROM dba;");
+		return $query->result();
+	}
 
 
 
