@@ -52,7 +52,7 @@ $atributos = array('id'=> 'form_enviar', 'class' => 'enviar_form','href' => 'usu
             <div class="grid_12" id="head">
                 <div class="grid_2" id="head_nombre">Nombre</div>
                 <div class="grid_2" id="head_apellido">Apellido</div>
-                <div class="grid_2" id="head_nick">Fecha de registro</div>
+                <div class="grid_2" id="head_nick">Nick</div>
                 <div class="grid_2" id="head_editar">Editar</div>
             </div>
             <?php
