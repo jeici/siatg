@@ -115,11 +115,15 @@ class Usuario extends CI_Controller{
 		$data['main_content']='form_user';
 		$data['title']='Modificar Usuario';
 		$data['users']=$users;
+		$data['tipo']=$tipo;
 		$this->load->view('includes/template4',$data);
 	}
 	
 	function modificar_user(){
 		$id=$this->input->post('id');
+		$tipo=$this->input->post('tipo');
+		echo $id;
+		echo $tipo;
 		$data['title']='SISTEMA DE ADMINISTRACION DE TRABAJOS DE GRADUACION';//esta variable se imprime en el
 		//header en el tag title
 		$data['main_content']='form_tipo';
