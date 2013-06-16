@@ -20,6 +20,7 @@ class Trabajograduacion extends CI_Controller{
             
             $item1=$this->trabajog_model->obtener_asesor();
             $item2=$this->trabajog_model->obtener_observador();
+            
                 
             $data['title']='SISTEMA DE ADMINISTARCION DE TRABAJOS DE GRADUACION';//esta variable se imprime en el 
             //header en el tag title
@@ -27,6 +28,9 @@ class Trabajograduacion extends CI_Controller{
              $data['title']='Ingresar Trabajo de Graduacion';
              $data['item1']=$item1;
              $data['item2']=$item2;
+             
+             $data['item']=0;
+             
             $this->load->view('includes/template',$data);
 
         

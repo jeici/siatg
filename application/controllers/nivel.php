@@ -17,6 +17,10 @@ class Nivel extends CI_Controller{
             //header en el tag title
             $data['main_content']='form_ins_nivel';
              $data['title']='Ingresar Nivel';
+             
+             $data['item2']=0;
+             $data['item']=0;
+             
             $this->load->view('includes/template',$data);
     }
     
