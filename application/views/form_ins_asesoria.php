@@ -1,29 +1,29 @@
 
-<title>
-Datos Asesoría
-</title>
+	<title>
+	Datos Asesoría
+	</title>
 
-<!-- Meta Tags -->
-<meta charset="utf-8">
-<meta name="generator" content="Wufoo">
-<meta name="robots" content="index, follow">
+	<!-- Meta Tags -->
+	<meta charset="utf-8">
+	<meta name="generator" content="Wufoo">
+	<meta name="robots" content="index, follow">
 
-<!-- CSS -->
-<link href="../css/structure.css" rel="stylesheet">
-<link href="../css/form.css" rel="stylesheet">
-
-<!-- JavaScript -->
-<script src="../scripts/wufoo.js"></script>
-
-
-<!--[if lt IE 10]>
-<script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
-
-<!-- para la fecha -->
-		<link rel="stylesheet" href="../js/datepicker/jquery-ui.css" />
-		<script src="../js/datepicker/jquery-1.8.3.js"></script>
-		<script src="../js/datepicker/jquery-ui.js"></script>
+	<!-- CSS -->
+	<link href="../css/structure.css" rel="stylesheet">
+	<link href="../css/form.css" rel="stylesheet">
+	
+	<!-- JavaScript -->
+	<script src="../scripts/wufoo.js"></script>
+	
+	
+	<!--[if lt IE 10]>
+	<script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	
+	<!-- para la fecha -->
+		<link rel="stylesheet" href="<?php echo base_url();?>js/datepicker/jquery-ui.css" />
+		<!-- <script src="<?php echo base_url();?>js/datepicker/jquery-1.8.3.js"></script> -->
+		<script src="<?php echo base_url();?>js/datepicker/jquery-ui.js"></script>
 		<script>
 			$(function() {
 				$( "#datepicker" ).datepicker();
@@ -31,13 +31,13 @@ Datos Asesoría
 				  $( "#datepicker" ).datepicker( "option", "showAnim", $( this ).val() );
 				});
 			  });
-		</script>
-		
-</head>
+		</script>	
+	 	
+
 
 <body id="public">
-
-<div id="container" class="ltr">
+<div class="container_12 ">
+	<div id="container" class="ltr">
 <?php 
         $atributos = array('id'=> 'form_ins_asesoria', 'class' => 'asesoria_form');
         echo form_open('asesoria/guardar_asesoria',$atributos); //en este caso datosenviados contiene la url que hace el action 
@@ -93,71 +93,66 @@ Datos Asesoría
         ?>
     
 
-<form id="form1" name="form1" class="wufoo topLabel page" autocomplete="off" enctype="multipart/form-data" method="post" novalidate
-action="https://jrlopez.wufoo.com.mx/forms/z7x4m1/#public">
+	<form id="form1" name="form1" class="wufoo topLabel page" autocomplete="off" enctype="multipart/form-data" method="post" novalidate
+	action="https://jrlopez.wufoo.com.mx/forms/z7x4m1/#public">
 
 
-<h2>Datos Asesoría</h2>
-<div>Ingreso de Asesorías </div>
-
-
-<ul>
-
-
-
-<li id="foli11" class="notranslate      ">
-<div id="id_tg" >
-<label class="desc" id="title11" for="Field11">
-Tema Trabajo de Graduación
-</label>
-    
-<?php echo form_dropdown('tg', $data_tg,1);
-//<?php echo form_error('titulo');?>
-
-    
-</div>
-    
-    
-<label class="desc" id="title11" for="Field11">
-Fecha
-</label>
-<div>
-<?php echo form_input($data_fecha);?>
-<?php //echo form_error('nombre');?>
-</div>
-</li>
-
-<li id="foli103" class="date notranslate      ">
-	<label class="desc" id="title11" for="Field11">
-		Fecha 2
-	</label>
+	<h2>Datos Asesoría</h2>
+	<div>Ingreso de Asesorías </div>
 	
-	<div>
-		<?php echo form_input($data_fecha2);?>
-		<?php //echo form_error('nombre');?>
-	</div>
-</li> 
-<li id="foli11" class="notranslate      ">
-<label class="desc" id="title11" for="Field11">
-Hora
-</label>
+	
+	<ul>
+	
+	
+	
+	<li id="foli11" class="notranslate      ">
+		<div id="id_tg" >
+			<label class="desc" id="title11" for="Field11">
+			Tema Trabajo de Graduación
+			</label>
+			    
+			<?php echo form_dropdown('tg', $data_tg,1);
+			//<?php echo form_error('titulo');?>
+		
+		    
+		</div>
+	    
+	    
+		<label class="desc" id="title11" for="Field11">
+		Fecha
+		</label>
+		<div>
+			<?php echo form_input($data_fecha);?>
+			<?php //echo form_error('nombre');?>
+		</div>
+	</li>
 
-<div>
-<?php echo form_input($data_hora);?>
-<?php //echo form_error('correo');?>
-</div>
-</li>
+	<li id="foli103" class="date notranslate      ">
+		<label class="desc" id="title11" for="Field11">
+			Fecha 2
+		</label>
+	
+		<div>
+			<?php echo form_input($data_fecha2);?>
+			<?php //echo form_error('nombre');?>
+		</div>
+	</li> 
+	<li id="foli11" class="notranslate      ">
+		<label class="desc" id="title11" for="Field11">
+		Hora
+		</label>
+		
+		<div>
+			<?php echo form_input($data_hora);?>
+			<?php //echo form_error('correo');?>
+		</div>
+	</li>
 <li id="foli12" class="notranslate      ">
 <fieldset>
 <![if !IE | (gte IE 8)]>
 
 </fieldset>
-
-
-    
-    
-    
-    
+ 
 <div>
 <?php echo form_submit('ingresar','Ingresar Persona');?>
                     
@@ -190,3 +185,6 @@ $('#Tipo').change(function(){
    });
 
 </script>
+
+
+</div>

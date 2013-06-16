@@ -207,8 +207,8 @@
         </script>
    </div>
     
-	</div>
+</div>
 	
-	</header>
+</header>
      
-    <body> 
+<body> 
