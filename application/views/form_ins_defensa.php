@@ -16,7 +16,7 @@
 	
 	
 	<!--[if lt IE 10]>
-	<script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="https://html5shiv. googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 	
 	<!-- para la fecha -->
