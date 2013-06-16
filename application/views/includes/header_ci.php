@@ -7,20 +7,20 @@
    
         <ul id="jMenu">
             <li>
-                <a class="fNiv">Category 1</a>
+                <a class="fNiv">Administración</a>
                 <ul>
                     <li class="arrow"></li>
                     <li>
-                        <a>Category 1.2</a>
+                        <a>Personal Administrativo</a>
                         <ul>
-                            <li><a>Category 1.3</a></li>
-                            <li><a>Category 1.3</a></li>
-                            <li><a>Category 1.3</a></li>
-                            <li><a>Category 1.3</a></li>
+                            <li><a>Agregar Personal</a></li>
+                            <li><a>Modificar Personal</a></li>
+                            <li><a>Consultar Personal</a></li>
+                            <li><a>Dar de baja</a></li>
                             <li>
-                                <a>Category 1.3</a>
+                                <!--<a>Category 1.3</a>-->
                                 <ul>
-                                    <li><a>Category 1.4</a></li>
+                                   <li><a>Category 1.4</a></li>
                                     <li><a>Category 1.4</a></li>
                                     <li><a>Category 1.4</a></li>
                                     <li>
@@ -44,7 +44,7 @@
                                     <li><a>Category 1.4</a></li>
                                 </ul>
                             </li>
-                            <li><a>Category 1.3</a></li>
+                           <!-- <li><a>Category 1.3</a></li>-->
                         </ul>
                     </li>
                     <li><a>Category 1.2</a></li>
@@ -72,14 +72,17 @@
             </li>
 
             <li>
-                <a class="fNiv">Category 2</a>
+                <a class="fNiv">Usuarios</a>
                 <ul>
                     <li class="arrow"></li>
                     <li>
-                        <a>Category 2.2</a>
+                        <a>Usuarios</a>
                         <ul>
-                            <li><a>Category 2.3</a></li>
-                            <li><a>Category 2.3</a></li>
+                            <li><a>Agregar Usuario</a></li>
+                            <li><a>Modificar Usuario</a></li>
+                            <li><a>Consultar Usuario</a></li>
+                            <li><a>Dar de baja</a></li>
+                            
                         </ul>
                     </li>
                     <li>
@@ -106,49 +109,59 @@
             </li>
 
             <li>
-                <a class="fNiv">Category 3</a>
+                <a class="fNiv">Trabajos de Graduación</a>
                 <ul>
                     <li class="arrow"></li>
                     <li>
-                        <a>Category 3.2</a>
+                        <a>Trabajos de Graduación</a>
                         <ul>
+                            <li><a>Agregar Trabajos de Graduación</a></li>
+                            <li><a>Modificar Trabajos de Graduación</a></li>
+                            <li><a>Consultar Trabajos de Graduación</a></li>
+                      <!--  <li><a>Category 3.3</a></li>
                             <li><a>Category 3.3</a></li>
                             <li><a>Category 3.3</a></li>
-                            <li><a>Category 3.3</a></li>
-                            <li><a>Category 3.3</a></li>
-                            <li><a>Category 3.3</a></li>
-                            <li><a>Category 3.3</a></li>
-                            <li><a>Category 3.3</a></li>
+                            <li><a>Category 3.3</a></li>-->
                         </ul>
                     </li>
                     <li>
-                        <a>Category 3.2</a>
+                        <a>Calificaciones</a>
                         <ul>
-                            <li><a>Category 3.3</a></li>
-                            <li><a>Category 3.3</a></li>
+                            <li><a>Calificar Trabajo de Graduación</a></li>
+                            <li><a>Consultar Calificación</a></li>
                         </ul>
                     </li>
                     <li><a>Category 3.2</a></li>
-                    <li><a>Category 3.2</a></li>
+                   <!-- <li><a>Category 3.2</a></li>-->
                 </ul>
             </li>
 
             <li>
-                <a class="fNiv">Category 4</a>
+                <a class="fNiv">Defensas</a>
                 <ul>
                     <li class="arrow"></li>
-                    <li><a>Category 4.2</a></li>
-                    <li><a>Category 4.2</a></li>
+                  <!--  <li><a>Category 4.2</a></li>
+                    <li><a>Category 4.2</a></li>-->
                     <li>
-                        <a>Category 4.2</a>
+                        <a>Defensa </a>
                         <ul>
-                            <li><a>Category 4.3</a></li>
-                            <li><a>Category 4.3</a></li>
-                            <li><a>Category 4.3</a></li>
-                            <li><a>Category 4.3</a></li>
+                            <li><a>Programar Defensa</a></li>
+                            <li><a>Reprogramar Defensa</a></li>
+                            <li><a>Consultar Defensa</a></li>
+                           <!-- <li><a>Category 4.3</a></li>-->
                         </ul>
                     </li>
-                    <li><a>Category 4.2</a></li>
+                    <li><a>Local</a>
+                    <ul>
+                            <li><a>Asignar Local</a></li>
+                            <li><a>Cambiar Local</a></li>
+                            <li><a>Consultar Local</a></li>
+                           <!-- <li><a>Category 4.3</a></li>-->
+                        </ul>
+                    
+                    
+                    </li>
+                    
                 </ul>
             </li>
 
