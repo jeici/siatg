@@ -10,7 +10,7 @@ class Persona_model extends CI_Controller{
     
     
     
-    function agregar_persona($carnet_p,$id_carr, $id_tele,  $name, $ape , $dir, $email, $status, $type, $titlo,$idtrag,$tele){
+    function agregar_persona($carnet_p,$id_carr, $id_tele,  $name, $ape , $dir, $email, $status, $type,$type2, $titlo,$idtrag,$tele){
 		$sql = "select prc_ins_persona('";
 		$sql.=$carnet_p."',";
 		$sql.=$id_carr.",";
@@ -21,6 +21,7 @@ class Persona_model extends CI_Controller{
 		$sql.="'".$email."',";
 		$sql.="'".$status."',";
 		$sql.="'".$type."',";
+                $sql.="'".$type2."',";
                 $sql.="'".$titlo."',";
 		$sql.=$idtrag.",";
                 $sql.=$tele.")";      

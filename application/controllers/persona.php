@@ -58,13 +58,13 @@ class Persona extends CI_Controller{
               $trabg = $this->input->post('tg');
               $telef = $this->input->post('telefono');
               $car = $this->input->post('carrera');
-              
+              $tipe2 = $this->input->post('Tipo2');
               
               
               
               
 	    // $this->verificar_datos_persona();
- $insert = $this->per->agregar_persona($carn,$car,1,$nombs,$apell,$dire, $mail,$state,$tipe,$title,$trabg,$telef);
+ $insert = $this->per->agregar_persona($carn,$car,1,$nombs,$apell,$dire, $mail,$state,$tipe,$tipe2,$title,$trabg,$telef);
                                        
          foreach ($insert as $valor)
          {
@@ -118,8 +118,9 @@ class Persona extends CI_Controller{
 	      $mail = $this->input->post('correo');
 	      $state = $this->input->post('estado');
               $tipe = $this->input->post('Tipo');
-           $insert = $this->per->agregar_persona($carn,1,1,$nombs,$apell,$dire, $mail,$state,$tipe);
-            
+              $tipe2 = $this->input->post('Tipo2');
+           $insert = $this->per->agregar_persona($carn,1,1,$nombs,$apell,$dire, $mail,$state,$tipe,$tipe2);
+                                                
             
               
          foreach ($insert as $valor)

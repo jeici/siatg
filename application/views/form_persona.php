@@ -223,6 +223,12 @@ Tipo
 <div id="titulo" style="display:none">
 <?php echo form_input($data_titulo);?>
 <?php echo form_error('titulo');?>
+ <select name="Tipo2" id="Tipo2">
+				
+			  	<option value="1">Asesor</option>
+			  	<option value="2">Observador</option>
+			  	
+      		</select>   
 </div>
 
 <!campos que permenace ocultos si no se selecciona estudiante>
