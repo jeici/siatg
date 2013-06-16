@@ -55,12 +55,7 @@ class Defensa extends CI_Controller{
             $a4 = $this->input->post('inidefensa');
             $a5 = $this->input->post('findefensa');
             
-            printf($a1);
-            printf($a2);
-            printf($a3);
-            printf($a4);
-            printf($a5);
-            
+                        
             $this->defensa_model->agregar_defensa($a1,$a2,$a3,$a4,$a5);
         }  
         
