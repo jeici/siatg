@@ -22,7 +22,7 @@ class Defensa extends CI_Controller{
             
             
                 
-            $data['title']='SISTEMA DE ADMINISTARCION DE TRABAJOS DE GRADUACION';//esta variable se imprime en el 
+            $data['title']='SISTEMA DE ADMINISTARCION DE TRABAJOS DE GRADUACION';//esta  variable se imprime en el 
             //header en el tag title
             $data['main_content']='form_ins_defensa';
              $data['title']='Ingresar Defensa';
