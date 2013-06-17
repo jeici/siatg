@@ -42,6 +42,6 @@ class Nivel_model extends CI_Controller{
 		$query = $this->db->query($sql,array($id,$tipo));
 		
                 	
-                    }
+               }
 }
 ?>
