@@ -1,28 +1,36 @@
-<?php
-if (!defined('BASEPATH')) exit('No direct script access allowed');
-class Home extends CI_Controller{
-	function __construct()
-	{
-		parent::__construct();
-		//$this->load->helper('form');
-		//$this->load->model('persona_model','per',TRUE);
 
-	}
-        
-        function index(){
-            $data['main_content']='contenido2';// este array hace referencia a la variable $main_content del template.php
-            $data['title']='SISTEMA DE ADMINISTARCION DE TRABAJOS DE GRADUACION';//esta variable se imprime en el header en el tag title
-            $this->load->view('includes/template',$data);
-		//la library solo sera accesible desde la funciion index
-		//antes de ejecutar la funcion construir menu es necesario crear una variable para
-		//pasarle a la vista
-	}
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+session_start(); //we need to call PHP's session object to access it through CI
+class Home extends CI_Controller {
 
-//antes de ejecutar la funcion construir menu es necesario crear una variable para
-}		//pasarle a la vista
-	
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+ function __construct()
+ {
+   parent::__construct();
+ }
+
+ function index()
+ {
+   if($this->session->userdata('logged_in'))
+   {
+     $session_data = $this->session->userdata('logged_in');
+     $data['username'] = $session_data['username'];
+     $this->load->view('home_view', $data);
+   }
+   else
+   {
+     //If no session, redirect to login page
+     redirect('login', 'refresh');
+   }
+ }
+
+ function logout()
+ {
+   $this->session->unset_userdata('logged_in');
+   session_destroy();
+   redirect('home', 'refresh');
+ }
+
+}
+
 ?>
+
