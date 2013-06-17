@@ -31,10 +31,10 @@
   
         <div class="grid_14">
             <div class="grid_14" id="head">
-                <div class="grid_1" id="head_nombre">Id Defensa.</div>
+                <div class="grid_2" id="head_nombre">Id Defensa.</div>
                 <div class="grid_1" id="head_apellido">Id T.G.</div>
                 <div class="grid_2" id="head_nombre">Fecha Def</div>
-                <div class="grid_2" id="head_apellido">Num. Def.</div>
+                <div class="grid_1" id="head_apellido">Num. Def.</div>
                 <div class="grid_2" id="head_nombre">Inicio Def.</div>
                 <div class="grid_2" id="head_nombre">Fin Def..</div>
                 
@@ -45,10 +45,10 @@
             foreach($nivel as $fila):
             ?>
             <div class="grid_12" id="body">
-                <div class="grid_1" id="nombre<?=$fila->id_defensa?>"><?=$fila->id_defensa?></div>
+                <div class="grid_2" id="nombre<?=$fila->id_defensa?>"><?=$fila->id_defensa?></div>
                 <div class="grid_1" id="email<?=$fila->id_defensa?>"><?=$fila->id_trabajog?></div>
                 <div class="grid_2" id="nombre<?=$fila->id_defensa?>"><?=$fila->fecha_defensa?></div>
-                <div class="grid_2" id="email<?=$fila->id_defensa?>"><?=$fila->num_defensa?></div>
+                <div class="grid_1" id="email<?=$fila->id_defensa?>"><?=$fila->num_defensa?></div>
                 <div class="grid_2" id="nombre<?=$fila->id_defensa?>"><?=$fila->ini_defensa?></div>
                 <div class="grid_2" id="email<?=$fila->id_defensa?>"><?=$fila->fin_defensa?></div>
                 
