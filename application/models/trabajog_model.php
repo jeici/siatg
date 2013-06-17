@@ -40,5 +40,29 @@ class Trabajog_model extends CI_Controller{
 		$query = $this->db->query($sql,array($a1,$a2,$a3,$a4,$a5,$a6,$a7,$a8));
                 	
                     }
+                    
+       /*modificar update*/
+    function obtener_tg(){
+                
+            $query=$this->db->query("SELECT * FROM trabajograduacion;");
+            return $query->result();
+    }
+    
+    function obtener_id($id){
+                
+            $query=$this->db->query("SELECT * FROM trabajograduacion where id_trabajog = $id;");
+            
+            return $query->result();
+    }
+    function modificar_tg($a1,$a2,$a3,$a4,$a5,$a6,$a7){
+		                                
+               
+               
+                $sql= "SELECT prc_upd_tg(?,?,?,?,?,?,?);";
+
+		$query = $this->db->query($sql,array($a1,$a2,$a3,$a4,$a5,$a6,$a7));
+		
+                	
+               }
 }
 ?>

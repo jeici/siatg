@@ -21,6 +21,7 @@ class Nivel_model extends CI_Controller{
 		
                 	
                     }
+                    /*modificar update*/
     function obtener_nivel(){
                 
             $query=$this->db->query("SELECT * FROM nivel;");
