@@ -151,6 +151,30 @@ class Usuario extends CI_Controller{
 		$this->load->view('includes/template5',$data);
 		
 	}
+	
+	function actualizar_usuario(){
+		
+		$id=$this->input->post('id');
+		$nombre = $this->input->post('nombres');
+		$apellido = $this->input->post('apellidos');
+		$dir = $this->input->post('direccion');
+		$email = $this->input->post('correo');
+		$nick = $this->input->post('nick');
+		$pass= $this->input->post('pass');
+		$status = $this->input->post('estado');
+		$carrera=$this->input->post('carrera');
+		$tipo = $this->input->post('tipo');
+		$nivel=$this->input->post('nivel');
+		$tel=$this->input->post('tel');
+		
+		$insert = $this->usuario->actualizar_usuario($id,$nombre,$apellido,$dir,$email,$nick,$pass,$status,$carrera,$tipo,$nivel,$tel);
+		
+		foreach ($insert as $valor)
+		{
+			echo $valor->prc_modi_usuario;
+		
+		}
+	}
 
 }
 ?>
