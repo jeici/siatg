@@ -2,7 +2,7 @@
 <html>
   <header>
     <meta charset="utf-8">
-	<div class="container_12 ">
+	<div class="container_16 ">
         <!-- bjqs.css contains the *essential* css needed for the slider to work -->
     	<link rel="stylesheet" href="<?php echo base_url();?>css/bjqs.css">
 
@@ -54,7 +54,7 @@
 		
 		          $('#banner-fade').bjqs({
 		            height      : 320,
-		            width       : 960,
+		            width       : 1280,
 		            responsive  : true
 		          });
 		
