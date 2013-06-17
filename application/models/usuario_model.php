@@ -131,6 +131,30 @@ class Usuario_model extends CI_Controller{
 		}
 		return $item;
 	}
+	
+	function actualizar_usuario($id,$nombre,$apellido,$dir,$email,$nick,$pass,$status,$carrera,$tipo,$nivel,$tel){
+	
+		$sql= "SELECT prc_modi_usuario(?,?,?,?,?,?,?,?,?,?,?,?);";
+	
+		/*if($tipo==1){
+		 $nivel=1;
+		}else{
+		$nivel=2;
+		}*/
+	
+		$query = $this->db->query($sql,array($id,$nombre,$apellido,$dir,$email,$nick,$pass,$status,$nivel,$carrera,$tipo,$tel));
+	
+		if($query->num_rows()>0){
+			foreach ($query->result() as $fila){
+				$data[]=$fila;
+			}
+			return $data;
+		}
+		else{
+			$data[]="la consulta no pudo ser ejecutada";
+			return $data;
+		}
+	}
 
 }
 ?>
