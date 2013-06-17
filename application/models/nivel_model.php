@@ -21,5 +21,27 @@ class Nivel_model extends CI_Controller{
 		
                 	
                     }
+    function obtener_nivel(){
+                
+            $query=$this->db->query("SELECT * FROM nivel;");
+            return $query->result();
+    }
+    
+    function obtener_id($id){
+                
+            $query=$this->db->query("SELECT * FROM nivel where id_nivel = $id;");
+            
+            return $query->result();
+    }
+    function modificar_nivel($id,$tipo){
+		                                
+               
+               
+                $sql= "SELECT prc_upd_nivel(?,?);";
+
+		$query = $this->db->query($sql,array($id,$tipo));
+		
+                	
+               }
 }
 ?>
