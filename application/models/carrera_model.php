@@ -20,5 +20,29 @@ class Carrera_model extends CI_Controller{
 		$query = $this->db->query($sql,array($a1,$a2));
                 	
                     }
+                    
+     /*modificar  update*/
+    function obtener_carr(){
+                
+            $query=$this->db->query("SELECT * FROM carrera;");
+            return $query->result();
+    }
+    
+    function obtener_id($id){
+                
+            $query=$this->db->query("SELECT * from carrera where id_carrera = $id;");
+            
+            return $query->result();
+    }
+    function modificar_carr($a1,$a2,$a3){
+		                                
+               
+               
+                $sql= "SELECT prc_upd_carr(?,?,?);";
+
+		$query = $this->db->query($sql,array($a1,$a2,$a3));
+		
+                	
+               }
 }
 ?>
