@@ -35,10 +35,10 @@ class Asesoria extends CI_Controller{
     function guardar_asesoria(){
         
            $cod_tg = $this->input->post('tg');
-           // $nase = $this->input->post('fecha');
-            $fase = $this->input->post('fecha');
+           //$nase = $this->input->post('fecha');
+            $fase = $this->input->post('datepicker');
             $horase = $this->input->post('hora');
-            
+           
             
           $insert = $this->ase->agregar_asesoria(1,1,$fase,$horase);
                                        
@@ -50,8 +50,16 @@ class Asesoria extends CI_Controller{
             
 	  }
           
+    function to_pdf(){         
+$this->load->database();
             
-                                                  
+//$this->load->helper('pdf_helper');
+$this->load->library('pdf');
+$this->pdf->load_view('home_view');
+$this->pdf->render();
+$this->pdf->stream("welcome.pdf");
+    }
+                                                                    
         
         
         

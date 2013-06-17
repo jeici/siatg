@@ -1,8 +1,4 @@
 
-<title>
-Iniciar Sesion
-</title>
-
 <!-- Meta Tags -->
 <meta charset="utf-8">
 <meta name="generator" content="Wufoo">

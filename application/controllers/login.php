@@ -13,7 +13,7 @@ class Login extends CI_Controller {
    $this->load->helper(array('form'));
    //$this->load->view('login_view');
    $data['main_content']='login_view';
-    
+   $data['title']='Iniciar Sesion';
    $this->load->view('includes/templatelogin',$data);
  }
 
