@@ -14,7 +14,7 @@ class Nivel extends CI_Controller{
     
     function usuario(){
         $data['title']='SISTEMA DE ADMINISTARCION DE TRABAJOS DE GRADUACION';//esta variable se imprime en el 
-            //header en el tag title
+            //header en el  tag title
             $data['main_content']='form_ins_nivel';
              $data['title']='Ingresar Nivel';
              
