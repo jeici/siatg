@@ -63,6 +63,57 @@ class Defensa extends CI_Controller{
         
     }
     
+    /*modificar defensa*/
+    function seleccionar_def(){
+        
+            $this->load->model('defensa_model');
+            $nivel= $this->defensa_model->obtener_def();
+            
+		$data['title']='SISTEMA DE ADMINISTRACION DE TRABAJOS DE GRADUACION';//esta variable se imprime en el
+		//header en el tag title
+		$data['main_content']='form_mod_def';
+		$data['title']='Modificar Defensa';
+                $data['nivel']=$nivel;
+		$this->load->view('includes/templatej',$data);       
+		
+	}
+     function modificar_def(){
+         
+                $id = $this->input->post('id');
+                $this->load->model('defensa_model');
+                $nivel= $this->defensa_model->obtener_id($id);
+                
+                $data['title']='SISTEMA DE ADMINISTRACION DE TRABAJOS DE GRADUACION';//esta variable se imprime en el
+		//header en el tag title
+		$data['main_content']='form_mod_def2';
+		$data['title']='Modificar Defensa';
+                $data['nivel']=$nivel;
+		$this->load->view('includes/templatej',$data);  
+                       
+                
+                /*foreach ($query->result_array()  as $campo){
+			
+                        $a1=$campo['id_nivel'];
+                        $a2=$campo['tipo']; 
+                        }*/
+     }
+     
+     function modificar_def2(){
+         
+                $this->load->model('defensa_model');
+                $a1 = $this->input->post('id_defensa');
+                $a2 = $this->input->post('id_trabajog');
+                $a3 = $this->input->post('fecha_defensa');
+                $a4 = $this->input->post('num_defensa');
+                $a5 = $this->input->post('ini_defensa');
+                $a6 = $this->input->post('fin_defensa');
+                
+                echo 'correcto';
+                
+                $this->defensa_model->modificar_def($a1,$a2,$a3,$a4,$a5,$a6);
+                
+     }
+    
 }
 
 ?>

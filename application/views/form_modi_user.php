@@ -247,7 +247,7 @@ Contrase&ntilde;a
 <li class="buttons ">
 <div>
 
-<?php echo form_submit('ingresar','Ingresar Usuario');?>
+<?php echo form_submit('Modificar','Modificar Usuario');?>
                     
  </div>
 </li>
