@@ -73,7 +73,7 @@ Modificar Trabajo de graduacion
         $data6 = array(
               'name'        => 'condicion',
               'id'          => 'condicion',
-              'placeholder' => 'Digite el condicion',
+              'placeholder' => 'TRUE O FALSE',
               'value'       => $nivel[0]->condicion
               
             );
