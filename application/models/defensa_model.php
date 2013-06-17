@@ -29,5 +29,29 @@ class Defensa_model extends CI_Controller{
 		$query = $this->db->query($sql,array($a1,$a2,$a3,$a4,$a5));
                 	
                     }
+                    
+        /*modificar update*/
+    function obtener_def(){
+                
+            $query=$this->db->query("SELECT * FROM defensa;");
+            return $query->result();
+    }
+    
+    function obtener_id($id){
+                
+            $query=$this->db->query("SELECT * from defensa where id_defensa = $id;");
+            
+            return $query->result();
+    }
+    function modificar_def($a1,$a2,$a3,$a4,$a5,$a6){
+		                                
+               
+               
+                $sql= "SELECT prc_upd_def(?,?,?,?,?,?);";
+
+		$query = $this->db->query($sql,array($a1,$a2,$a3,$a4,$a5,$a6));
+		
+                	
+               }
 }
 ?>
