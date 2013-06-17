@@ -32,7 +32,8 @@ class Persona extends CI_Controller{
 	}
         function datosenviados(){
             print_r($_POST);
-        }    
+        }  
+        
         function ingresar_persona(){
             $data['title']='SISTEMA DE ADMINISTARCION DE TRABAJOS DE GRADUACION';//esta variable se imprime en el 
             //header en el tag title

@@ -32,9 +32,9 @@
         <div class="grid_12">
             <div class="grid_12" id="head">
                 <div class="grid_2" id="head_nombre">Nivel</div>
-                <div class="grid_2" id="head_apellido">Tipo</div>
+                <div class="grid_3" id="head_apellido">Tipo</div>
                 
-                <div class="grid_2" id="head_editar">Editar</div>
+                <div class="grid_3" id="head_editar">Editar</div>
             </div>
              
             <?php
@@ -42,9 +42,9 @@
             ?>
             <div class="grid_12" id="body">
                 <div class="grid_2" id="nombre<?=$fila->id_nivel?>"><?=$fila->id_nivel?></div>
-                <div class="grid_2" id="email<?=$fila->id_nivel?>"><?=$fila->tipo?></div>
+                <div class="grid_3" id="email<?=$fila->id_nivel?>"><?=$fila->tipo?></div>
                 
-                <div class="grid_2" id="editar"><?php echo form_open("nivel/modificar_nivel");?><input type="submit" value="Modificar" id="<?=$fila->id_nivel?>" class="editar"><?php echo form_hidden('id', $fila->id_nivel);?><?php echo form_close();?></div>
+                <div class="grid_3" id="editar"><?php echo form_open("nivel/modificar_nivel");?><input type="submit" value="Modificar" id="<?=$fila->id_nivel?>" class="editar"><?php echo form_hidden('id', $fila->id_nivel);?><?php echo form_close();?></div>
             </div>
             <?php
             endforeach;

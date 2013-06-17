@@ -26,11 +26,9 @@
 		<script src="<?php echo base_url();?>js/datepicker/jquery-ui.js"></script>
 		<script>
 			$(function() {
-				$( "#datepicker" ).datepicker();
-				$( "#anim" ).change(function() {
-				  $( "#datepicker" ).datepicker( "option", "showAnim", $( this ).val() );
-				});
-			  });
+$("#datepicker").datepicker();
+$('#datepicker').datepicker('option', {dateFormat: 'yy/mm/dd'});
+});
 		</script>	
 	 	
 
@@ -54,7 +52,7 @@
          $data_fecha2 = array(
          		'name'        => 'datepicker',
          		'id'          => 'datepicker',
-         		//'value'       => set_value('fecha'),
+         		'value'       => set_value('datepicker'),
          		//'maxlength'   => '15',
          		'size'        => '30',
          		'class'		=> 'field text nospin small',
@@ -118,18 +116,12 @@
 		</div>
 	    
 	    
-		<label class="desc" id="title11" for="Field11">
-		Fecha
-		</label>
-		<div>
-			<?php echo form_input($data_fecha);?>
-			<?php //echo form_error('nombre');?>
-		</div>
+		
 	</li>
 
 	<li id="foli103" class="date notranslate      ">
 		<label class="desc" id="title11" for="Field11">
-			Fecha 2
+			Fecha 
 		</label>
 	
 		<div>
