@@ -91,7 +91,7 @@ class Defensa extends CI_Controller{
 		$this->load->view('includes/templatej',$data);  
                        
                 
-                /*foreach ($query->result_array() as $campo){
+                /*foreach ($query->result_array()  as $campo){
 			
                         $a1=$campo['id_nivel'];
                         $a2=$campo['tipo']; 
