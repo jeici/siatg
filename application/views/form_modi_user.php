@@ -29,7 +29,7 @@ $data_id= array(
 	'name'=>'id',
 	'value' => $id,
 	'size' => '6',
-	'disabled'		
+	'readonly'=>'readonly'	
 );
 $data_nombres = array(
 		'name'        => 'nombres',
@@ -87,7 +87,7 @@ $data_nick= array(
 	'maxlength' => '15',
 	'size' 		=> '15',
 	'placeholder' => 'Digite el nick',	
-	'disabled'	
+	'readonly'=>'readonly'		
 
 );
 
