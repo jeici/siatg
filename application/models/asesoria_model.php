@@ -48,7 +48,48 @@ class Asesoria_model extends CI_Controller{
 		return $item;
 	
          }
+  ////funciones para modificar//////////////
+        function mensajes()
+{        
+    $query = $this->db->get('asesoria');
+        foreach ($query->result() as $fila)
+        {
+            $data[] = $fila;
+        }
+    return $data;
+}
+ 
+    //obtenemos la fila completa del mensaje a editar
+    //vemos que como solo queremos una fila utilizamos
+    //la función row que sólo nos devuelve una fila,
+    //así la consulta será más rápida
+    function obtener($id) {
+        $this->db->where('id_asesoria', $id);
+        $query = $this->db->get('asesoria');
+        $fila = $query->row();
+     
+        return $fila;
+    }
+ 
+    //actualizamos los datos en la base de datos con el patrón
+    //active record de codeIginiter, recordar que no hace falta
+    //escapar las consultas ya que lo hace él automaticámente
+    function actualizar_mensaje($id, $idtg, $n_as, $fec_as, $hor_ase) {
+        $data = array(
+            
+            'id_trabajog' => $idtg,
+            
+            'num_asesoria' => $n_as,
+            'fecha_asesoria' => $fec_as,
+            'hora_asesoria' => $hor_ase
+        );
+        $this->db->where('id_asesoria', $id);
+        return $this->db->update('asesoria', $data);
+    }
 
+/*application/models/datos_model.php
+* el modelo datos_model.php
+*/
 
 
 }
