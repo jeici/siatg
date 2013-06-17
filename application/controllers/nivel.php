@@ -44,6 +44,52 @@ class Nivel extends CI_Controller{
         
         
     }
+    /*modificar nivel*/
+    function seleccionar_nivel(){
+        
+            $this->load->model('nivel_model');
+            $nivel= $this->nivel_model->obtener_nivel();
+            
+		$data['title']='SISTEMA DE ADMINISTRACION DE TRABAJOS DE GRADUACION';//esta variable se imprime en el
+		//header en el tag title
+		$data['main_content']='form_mod_nivel';
+		$data['title']='Modificar Nivel';
+                $data['nivel']=$nivel;
+		$this->load->view('includes/templatej',$data);       
+		
+	}
+     function modificar_nivel(){
+         
+                $id = $this->input->post('id');
+                $this->load->model('nivel_model');
+                $nivel= $this->nivel_model->obtener_id($id);
+                
+                $data['title']='SISTEMA DE ADMINISTRACION DE TRABAJOS DE GRADUACION';//esta variable se imprime en el
+		//header en el tag title
+		$data['main_content']='form_mod_nivel2';
+		$data['title']='Modificar Nivel';
+                $data['nivel']=$nivel;
+		$this->load->view('includes/templatej',$data);  
+                       
+                
+                /*foreach ($query->result_array() as $campo){
+			
+                        $a1=$campo['id_nivel'];
+                        $a2=$campo['tipo']; 
+                        }*/
+     }
+     
+     function modificar_nivel2(){
+         
+                $this->load->model('nivel_model');
+                $id = $this->input->post('id_nivel');
+                $tipo = $this->input->post('tipo');
+                echo 'correcto';
+                printf($id);
+                printf($tipo);
+                $this->nivel_model->modificar_nivel($id,$tipo);
+                
+     }
     
 }
 ?>
