@@ -65,4 +65,6 @@ class Persona_model extends CI_Controller{
 		return $item2;
         
         }
+        
+        
 }

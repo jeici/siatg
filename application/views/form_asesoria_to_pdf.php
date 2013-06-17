@@ -37,8 +37,8 @@ $('#datepicker').datepicker('option', {dateFormat: 'yy/mm/dd'});
 <div class="container_12 ">
 	<div id="container" class="ltr">
 <?php 
-        $atributos = array('id'=> 'form_ins_asesoria', 'class' => 'asesoria_form');
-        echo form_open('asesoria/guardar_asesoria',$atributos); //en este caso datosenviados contiene la url que hace el action 
+        $atributos = array('id'=> 'form_asesoria_to_pdf', 'class' => 'asesoria_form');
+        echo form_open('tutorial/genera_pdf',$atributos); //en este caso datosenviados contiene la url que hace el action 
         
          $data_fecha = array(
               'name'        => 'fecha',
@@ -96,49 +96,17 @@ $('#datepicker').datepicker('option', {dateFormat: 'yy/mm/dd'});
 
 
 	<h2>Datos Asesoría</h2>
-	<div>Ingreso de Asesorías </div>
+	<div>Listado de Asesorías </div>
 	
 	
 	<ul>
 	
 	
 	
-	<li id="foli11" class="notranslate      ">
-		<div id="id_tg" >
-			<label class="desc" id="title11" for="Field11">
-			Tema Trabajo de Graduación
-			</label>
-			    
-			<?php echo form_dropdown('tg', $data_tg,1);
-			//<?php echo form_error('titulo');?>
-		
-		    
-		</div>
-	    
-	    
-		
-	</li>
-
-	<li id="foli103" class="date notranslate      ">
-		<label class="desc" id="title11" for="Field11">
-			Fecha 
-		</label>
 	
-		<div>
-			<?php echo form_input($data_fecha2);?>
-			<?php //echo form_error('nombre');?>
-		</div>
-	</li> 
-	<li id="foli11" class="notranslate      ">
-		<label class="desc" id="title11" for="Field11">
-		Hora
-		</label>
-		
-		<div>
-			<?php echo form_input($data_hora);?>
-			<?php //echo form_error('correo');?>
-		</div>
-	</li>
+
+	
+	
 <li id="foli12" class="notranslate      ">
 <fieldset>
 <![if !IE | (gte IE 8)]>
@@ -146,7 +114,7 @@ $('#datepicker').datepicker('option', {dateFormat: 'yy/mm/dd'});
 </fieldset>
  
 <div>
-<?php echo form_submit('ingresar','Ingresar Persona');?>
+<?php echo form_submit('Mostrar','IMostrar ');?>
                     
  </div>
 </li>
