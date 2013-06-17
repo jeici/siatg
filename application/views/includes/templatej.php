@@ -8,6 +8,6 @@ $this->load->view($main_content,$llenado); //esta variable servira para pasar el
 $this->load->view('includes/footer');//esta variable carga el footer en la vista
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in  the editor.
  */
 ?>
