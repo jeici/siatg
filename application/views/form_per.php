@@ -57,7 +57,7 @@ $atributos = array('id'=> 'form_enviar', 'class' => 'enviar_form','href' => 'per
                 <div class="grid_2" id="nombre<?=$fila->carnet?>"><?=$fila->nombres_p?></div>
                 <div class="grid_2" id="email<?=$fila->carnet?>"><?=$fila->apellidos_p?></div>
                 <div class="grid_2" id="registro<?=$fila->carnet?>"><?=$fila->direccion_p?></div>
-                <div class="grid_2" id="editar"><?php echo form_open("usuario/modificar_per",$atributos);?><input type="submit" value="Modificar" id="<?=$fila->carnet?>" class="editar"><?php echo form_hidden('id', $fila->carnet); echo form_hidden('tipo',$tipo);?> <?php echo form_close();?></div>
+                <div class="grid_2" id="editar"><?php echo form_open("persona/modificar_per",$atributos);?><input type="submit" value="Modificar" id="<?=$fila->carnet?>" class="editar"><?php echo form_hidden('id', $fila->carnet); echo form_hidden('tipo',$tipo);?> <?php echo form_close();?></div>
             </div>
             <?php
             endforeach;

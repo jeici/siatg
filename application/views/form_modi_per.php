@@ -25,7 +25,7 @@ Datos personales
 
 <div id="container" class="ltr">
 <?php 
-        $atributos = array('id'=> 'form_persona', 'class' => 'persona_form');
+        $atributos = array('id'=> 'form_modi_per', 'class' => 'persona_form');
         echo form_open('persona/actualizar_persona',$atributos); //en este caso datosenviados contiene la url que hace el action 
         $data_carnet = array(
               'name'        => 'carnet',

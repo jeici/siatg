@@ -148,7 +148,7 @@ class Persona extends CI_Controller{
 			$users= $this->per->obtener_docente();
 		}
 		else
-			$users=$this->per>obtener_estudiante();	
+			$users=$this->per->obtener_estudiante();	
 	
 		$data['title']='SISTEMA DE ADMINISTRACION DE TRABAJOS DE GRADUACION';//esta variable se imprime en el
 		//header en el tag title
@@ -164,7 +164,7 @@ class Persona extends CI_Controller{
         
         //llena el formulario modificacion
 	function modificar_per(){
-		$carnet=$this->input->post('carnet');
+		$carnet=$this->input->post('id');
 		$tipo=$this->input->post('Tipo');
 		$item=$this->per->obtener_titulo();//obtener titulo
 		$niveles=$this->per->obtener_tg();//obtener nivel
@@ -175,16 +175,16 @@ class Persona extends CI_Controller{
 			$tg=$this->per->buscar_tg($user['tg']);
 		}
 		else
-			$user=$this->per->buscar_docente($carnet);
+			$user=$this->per->buscar_estudiante($carnet);
 			//$tg=$this->per->buscar_tg($user['tg']);
 			//$telefono=$this->usuario->buscar_telefono($id);
-		print_r($carnet);
+		//print_r($carnet);
 		$data['title']='SISTEMA DE ADMINISTRACION DE TRABAJOS DE GRADUACION';//esta variable se imprime en el
 		//header en el tag title
 		$data['main_content']='form_modi_per';
-		$data['title']='Modificar Usuario';
-		$data['carnet']=$carnet; // el id del usuario recuperado
-		$data['Tipo']=$tipo; //tipo si es docente o estudiante la persona recuperada
+		$data['title']='Modificar Persona';
+		$data['id']=$carnet; // el id del usuario recuperado
+		$data['tipo']=$tipo; //tipo si es docente o estudiante la persona recuperada
 		$data['user']=$user; //asigna los datos de la tabla dba o administrador para que se usen en el formulario
 		$data['item']=$item; //asigno el array dentro de la variable data
 		$data['tg']=$niveles; //asigno el array nivel dentro de la variable data
