@@ -74,7 +74,7 @@
                     'id' => 'pasar_edicion',
                     'onclick' => "saltar($id)"
                 );
-                print_r($id);
+                
                 ?>
                 <tr>
                     <td><?= $fila->id_trabajog ?></td>
