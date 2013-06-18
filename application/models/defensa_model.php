@@ -20,13 +20,13 @@ class Defensa_model extends CI_Controller{
 	}
         
           
-        function agregar_defensa($a1, $a2, $a3, $a4, $a5){
+        function agregar_defensa($a1, $a2, $a3, $a4, $a5, $a6, $a7){
 		
                                 
                                
-                $sql= "SELECT prc_ins_defensa(?,?,?,?,?);";
+                $sql= "SELECT prc_ins_defensa(?,?,?,?,?,?,?);";
 
-		$query = $this->db->query($sql,array($a1,$a2,$a3,$a4,$a5));
+		$query = $this->db->query($sql,array($a1, $a2, $a3, $a4, $a5, $a6, $a7));
                 	
                     }
                     

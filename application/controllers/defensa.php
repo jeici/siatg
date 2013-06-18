@@ -57,10 +57,12 @@ class Defensa extends CI_Controller{
             $a2 = $this->input->post('datepicker');
             $a3 = $this->input->post('numdefensa');
             $a4 = $this->input->post('inidefensa');
-            $a5 = $this->input->post('findefensa');
+            printf($a5 = $this->input->post('findefensa'));
+            print_r($a6 = $this->input->post('nombreu'));
+            printf($a7 = $this->input->post('local'));
             
                         
-            $this->defensa_model->agregar_defensa($a1,$a2,$a3,$a4,$a5);
+            $this->defensa_model->agregar_defensa($a1,$a2,$a3,$a4,$a5,$a6,$a7);
             //$this->usuario();
         }  
         

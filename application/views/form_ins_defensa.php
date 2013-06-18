@@ -76,6 +76,24 @@
               
               'placeholder' => 'Hora fin de defensa',
             );
+       $data6 = array(
+              'name'        => 'nombreu',
+              'id'          => 'nombreu',
+              'value'       => set_value('nombreu'),
+              'maxlength'   => '50',
+              'size'        => '30',
+              
+              'placeholder' => 'digite la ubicacion',
+            );
+       $data7 = array(
+              'name'        => 'local',
+              'id'          => 'local',
+              'value'       => set_value('local'),
+              'maxlength'   => '50',
+              'size'        => '30',
+              
+              'placeholder' => 'digite local',
+            );
         
         ?>
     
@@ -136,11 +154,32 @@
         
         <li id="foli11" class="notranslate      ">
 		<label class="desc" id="title11" for="Field11">
-		Hora de fin de defensa
+		Hora fin defensa
 		</label>
 		
 		<div>
 			<?php echo form_input($data5);?>
+			<?php //echo  form_error('correo');?>
+		</div>
+	</li>
+        <li id="foli11" class="notranslate      ">
+		<label class="desc" id="title11" for="Field11">
+		Ubicacion
+		</label>
+		
+		<div>
+			<?php echo form_input($data6);?>
+			<?php //echo form_error('correo');?>
+		</div>
+	</li>
+        
+        <li id="foli11" class="notranslate      ">
+		<label class="desc" id="title11" for="Field11">
+		Local
+		</label>
+		
+		<div>
+			<?php echo form_input($data7);?>
 			<?php //echo  form_error('correo');?>
 		</div>
 	</li>
