@@ -13,7 +13,7 @@ Class User extends CI_Controller
 	}
  function login($username, $password)
  {
-     
+     //
      echo "entro aqui";
      printf($username);
      printf($password);
