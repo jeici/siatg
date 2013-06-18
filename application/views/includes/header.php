@@ -39,9 +39,11 @@
 
 			        <!-- start Basic Jquery Slider -->
 			        <ul class="bjqs">
+			        <li><img src="<?php echo base_url();?>imagenes/industrial.jpg" title="EISI"></li>
+			        <li><img src="<?php echo base_url();?>imagenes/admon.jpg" title="Administracion Academica FIA"></li>
 			          <li><img src="<?php echo base_url();?>imagenes/minerva.jpg" title="Minerva"></li>
-			          <li><img src="<?php echo base_url();?>imagenes/minerva2.jpg" title="Minerva"></li>
-			          <li><img src="<?php echo base_url();?>imagenes/ing.jpg" title="Biblioteca Ingenieria"></li>
+			          
+			          <li><img src="<?php echo base_url();?>imagenes/ing.jpg" title="Biblioteca FIA"></li>
 			           <li><img src="<?php echo base_url();?>imagenes/transition.jpg" ></li>
 			        </ul>
 			        <!-- end Basic jQuery Slider -->
