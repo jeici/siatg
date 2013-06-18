@@ -59,7 +59,7 @@ class Nota extends CI_Controller{
         
         
     }
-    /*modificar trabajograduacion*/
+    /*modificar trabajograd uacion*/
     
     
 }

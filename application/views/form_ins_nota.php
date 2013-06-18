@@ -14,7 +14,7 @@ Trabajo de Graduacion
 <!-- JavaScript -->
 <script src="scripts/wufoo.js"></script>
 
-<!--[if lt IE 10]>
+<!--     [if lt IE 10]>
 <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 </head>

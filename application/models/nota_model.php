@@ -13,7 +13,7 @@ class Nota_model extends CI_Controller{
 	$query= $this->db->query("SELECT * FROM defensa;");
 		$item1=array();
 		foreach ($query->result_array() as $campo){
-			$item1[$campo['id_defensa']]=$campo['num_defensa'];	//darle formato al array para que me funcione con el dropbox	
+			$item1[$campo['id_defensa']]=$campo['num_defensa'];	//    darle formato al array para que me funcione con el dropbox	
 		}
 
 		return $item1;
