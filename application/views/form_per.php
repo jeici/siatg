@@ -42,23 +42,22 @@ $atributos = array('id'=> 'form_enviar', 'class' => 'enviar_form','href' => 'per
 <?php if($tipo==1){?>
   <h2>LISTA DE DOCENTES</h2>
  <?php } else {?>
- <h2>LISTA DE DOCENTES</h2>
+ <h2>LISTA DE ESTUDIANTES</h2>
  <?php }?>
         <div class="grid_12">
             <div class="grid_12" id="head">
                 <div class="grid_2" id="head_nombre">Nombres</div>
                 <div class="grid_2" id="head_apellido">Apellidos</div>
                 <div class="grid_2" id="head_nick">Direccion</div>
-                <div class="grid_2" id="head_editar">Telefono</div>
             </div>
             <?php
             foreach($users as $fila):
             ?>
             <div class="grid_12" id="body">
-                <div class="grid_2" id="nombre<?=$fila->carnet?>"><?=$fila->nombre_u?></div>
-                <div class="grid_2" id="email<?=$fila->id_usuario?>"><?=$fila->apellido_u?></div>
-                <div class="grid_2" id="registro<?=$fila->id_usuario?>"><?=$fila->nick?></div>
-                <div class="grid_2" id="editar"><?php echo form_open("usuario/modificar_user",$atributos);?><input type="submit" value="Modificar" id="<?=$fila->id_usuario?>" class="editar"><?php echo form_hidden('id', $fila->id_usuario); echo form_hidden('tipo',$tipo);?> <?php echo form_close();?></div>
+                <div class="grid_2" id="nombre<?=$fila->carnet?>"><?=$fila->nombres_p?></div>
+                <div class="grid_2" id="email<?=$fila->carnet?>"><?=$fila->apellidos_p?></div>
+                <div class="grid_2" id="registro<?=$fila->carnet?>"><?=$fila->direccion_p?></div>
+                <div class="grid_2" id="editar"><?php echo form_open("usuario/modificar_per",$atributos);?><input type="submit" value="Modificar" id="<?=$fila->carnet?>" class="editar"><?php echo form_hidden('id', $fila->carnet); echo form_hidden('tipo',$tipo);?> <?php echo form_close();?></div>
             </div>
             <?php
             endforeach;
