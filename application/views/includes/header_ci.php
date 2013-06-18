@@ -13,10 +13,10 @@
                     <li>
                         <a>Personal Administrativo</a>
                         <ul>
-                            <li><a>Agregar Personal</a></li>
-                            <li><a>Modificar Personal</a></li>
-                            <li><a>Consultar Personal</a></li>
-                            <li><a>Dar de baja</a></li>
+                            <li><a href="<?php echo base_url();?>index.php/persona">Agregar Personal</a></li>
+                            <li><a href="<?php echo base_url();?>index.php/persona/seleccionar_tipo">Modificar Personal</a></li>
+                            <li><a href="<?php echo base_url();?>index.php/persona/seleccionar_tipo">Consultar Personal</a></li>
+                           
                             <li>
                                 <!--<a>Category 1.3</a>-->
                                 <ul>
@@ -78,10 +78,10 @@
                     <li>
                         <a>Usuarios</a>
                         <ul>
-                            <li><a>Agregar Usuario</a></li>
-                            <li><a>Modificar Usuario</a></li>
-                            <li><a>Consultar Usuario</a></li>
-                            <li><a>Dar de baja</a></li>
+                            <li><a href="<?php echo base_url();?>index.php/usuario">Agregar Usuario</a></li>
+                            <li><a href="<?php echo base_url();?>index.php/usuario/seleccionar_tipo">Modificar Usuario</a></li>
+                            <li><a href="<?php echo base_url();?>index.php/usuario/buscar_usuario">Consultar Usuario</a></li>
+                           
                             
                         </ul>
                     </li>
@@ -115,9 +115,9 @@
                     <li>
                         <a>Trabajos de Graduación</a>
                         <ul>
-                            <li><a>Agregar Trabajos de Graduación</a></li>
-                            <li><a>Modificar Trabajos de Graduación</a></li>
-                            <li><a>Consultar Trabajos de Graduación</a></li>
+                            <li><a href="<?php echo base_url();?>index.php/trabajograduacion/usuario">Agregar Trabajos de Graduación</a></li>
+                            <li><a href="<?php echo base_url();?>index.php/trabajograduacion/seleccionar_tg">Modificar Trabajos de Graduación</a></li>
+                            <li><a href="<?php echo base_url();?>index.php/trabajograduacion/seleccionar_tg">Consultar Trabajos de Graduación</a></li>
                       <!--  <li><a>Category 3.3</a></li>
                             <li><a>Category 3.3</a></li>
                             <li><a>Category 3.3</a></li>
@@ -127,12 +127,13 @@
                     <li>
                         <a>Calificaciones</a>
                         <ul>
-                            <li><a>Calificar Trabajo de Graduación</a></li>
-                            <li><a>Consultar Calificación</a></li>
+                            <li><a href="<?php echo base_url();?>index.php/nota/usuario">Calificar Trabajo de Graduación</a></li>
+                            <li><a >Modificar Calificación</a></li>
+                            <li><a >Consultar Calificación</a></li>
                         </ul>
                     </li>
-                    <li><a>Category 3.2</a></li>
-                   <!-- <li><a>Category 3.2</a></li>-->
+                    <li><a>Asesoria</a></li>
+                   <li><a>Category 3.2</a></li>
                 </ul>
             </li>
 
@@ -145,9 +146,9 @@
                     <li>
                         <a>Defensa </a>
                         <ul>
-                            <li><a>Programar Defensa</a></li>
-                            <li><a>Reprogramar Defensa</a></li>
-                            <li><a>Consultar Defensa</a></li>
+                            <li><a href="<?php echo base_url();?>index.php/defensa/usuario">Programar Defensa</a></li>
+                            <li><a href="<?php echo base_url();?>index.php/defensa/seleccionar_def">Reprogramar Defensa</a></li>
+                            <li><a href="<?php echo base_url();?>index.php/defensa/seleccionar_def">Consultar Defensa</a></li>
                            <!-- <li><a>Category 4.3</a></li>-->
                         </ul>
                     </li>
@@ -166,34 +167,44 @@
             </li>
 
             <li>
-                <a class="fNiv">Category 5</a>
+                <a class="fNiv">Carrera</a>
                 <ul>
                     <li class="arrow"></li>
                     <li>
-                        <a>Category 5.2</a>
+                        <a>Carrera</a>
                         <ul>
-                            <li><a>Category 5.3</a></li>
-                            <li><a>Category 5.3</a></li>
-                            <li><a>Category 5.3</a></li>
-                            <li><a>Category 5.3</a></li>
+                            <li><a href="<?php echo base_url();?>index.php/carrera/usuario">Agregar Carrera</a></li>
+                            <li><a href="<?php echo base_url();?>index.php/carrera/seleccionar_carr">Modificar Carrera</a></li>
+                            <li><a href="<?php echo base_url();?>index.php/carrera/seleccionar_carr">Consultar Carrera</a></li>
+                           
                         </ul>
                     </li>
-                    <li><a>Category 5.2</a></li>
-                    <li><a>Category 5.2</a></li>
-                    <li><a>Category 5.2</a></li>
+                    
                 </ul>
             </li>
 
-            <li><a class="fNiv">Category 6</a></li>
+            
 
             <li>
-                <a class="fNiv">Category 7</a>
+                <a class="fNiv">Nivel</a>
                 <ul>
                     <li class="arrow"></li>
-                    <li><a>Category 7.2</a></li>
-                    <li><a>Category 7.2</a></li>
-                    <li><a>Category 7.2</a></li>
-                    <li><a>Category 7.2</a></li>
+                    <li><a href="<?php echo base_url();?>index.php/nivel/usuario">Agregar Nivel</a></li>
+                    <li><a href="<?php echo base_url();?>index.php/nivel/seleccionar_nivel">Modificar Nivel</a></li>
+                   <li><a href="<?php echo base_url();?>index.php/nivel/seleccionar_nivel">Consultar Nivel</a></li>
+                   
+                </ul>
+            </li>
+            <li><a class="fNiv"></a></li>
+            
+            <li>
+                <a class="fNiv">Asesoria</a>
+                <ul>
+                    <li class="arrow"></li>
+                    <li><a href="<?php echo base_url();?>index.php/asesoria/">Agregar Asesoria</a></li>
+                    <li><a href="<?php echo base_url();?>index.php/datos_upd_ase">Modificar Asesoria</a></li>
+                   <li><a href="<?php echo base_url();?>index.php/datos_upd_ase">Consultar Asesoria</a></li>
+                   
                 </ul>
             </li>
             <li><a class="fNiv"></a></li>
