@@ -15,8 +15,8 @@ class Usuario extends CI_Controller{
 	function index(){
 		
 		//obtengo los id y nombres de la carrera
-		$item=$this->usuario->obtener_carrera();
-		$niveles=$this->usuario->obtener_nivel();
+		$item=$this->usuario->obtener_busqueda_carrera();
+		$niveles=$this->usuario->obtener_busqueda_nivel();
 		$data['title']='SISTEMA DE ADMINISTRACION DE TRABAJOS DE GRADUACION';//esta variable se imprime en el
 		//header en el tag title
 		$data['main_content']='form_usuario';
@@ -174,6 +174,36 @@ class Usuario extends CI_Controller{
 			echo $valor->prc_modi_usuario;
 		
 		}
+	}
+	
+	function buscar_usuario(){
+		$item=$this->usuario->obtener_busqueda_carrera();
+		$niveles=$this->usuario->obtener_busqueda_nivel();
+		$data['title']='SISTEMA DE ADMINISTRACION DE TRABAJOS DE GRADUACION';//esta variable se imprime en el
+		//header en el tag title
+		$data['main_content']='form_buscar';
+		$data['title']='Busqueda de Usuarios';
+		$data['item']=$item; //asigno el array dentro de la variable data
+		$data['nivel']=$niveles; //asigno el array nivel dentro de la variable data
+		$this->load->view('includes/template2',$data);	
+		
+	}
+	
+	function busqueda(){
+		$nombre=$this->input->post('nombres');
+		$carrera=$this->input->post('carrera');
+		$tipo = $this->input->post('tipo');
+		$nivel=$this->input->post('nivel');
+		
+		$resultado= $this->usuario->generar_vista($nombre,$carrera,$tipo,$nivel);
+		
+		$data['title']='SISTEMA DE ADMINISTRACION DE TRABAJOS DE GRADUACION';//esta variable se imprime en el
+		//header en el tag title
+		$data['main_content']='form_mostrar_usuario';
+		$data['title']='LISTADO USUARIOS';
+		$data['resultado']=$resultado;
+		$this->load->view('includes/template6',$data);
+		
 	}
 
 }

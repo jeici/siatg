@@ -65,7 +65,84 @@ class Persona_model extends CI_Controller{
 		return $item2;
         
         }
-      
+      //obtiene todos los docentes
+	function obtener_docente(){
+		$query=$this->db->query("SELECT * FROM docente;");
+			return $query->result();
+		
+	}
+	
+	//obtiene todos los estudiantes
+	function obtener_estudiante(){
+		$query=$this->db->query("SELECT * FROM estudiante;");
+		return $query->result();
+	}
+        
+        function obtener_titulo(){
+		$query=$this->db->query("SELECT titulo FROM docente;");
+		$titulo=array();
+		foreach($query->result_array() as $campo){
+			$titulo[$campo['titulo']]=$campo['titulo'];
+		}
+		return $titulo;
+	}
+        
+        function actualizar_persona($carnet_p,$id_carr, $id_tele,  $name, $ape , $dir, $email, $status, $type,$type2, $titlo,$idtrag,$tele){
+		$sql = "select prc_mod_persona('";
+		$sql.=$carnet_p."',";
+		$sql.=$id_carr.",";
+		$sql.=$id_tele.",";
+		$sql.="'".$name."',";
+		$sql.="'".$ape."',";
+		$sql.="'".$dir."',";
+		$sql.="'".$email."',";
+		$sql.="'".$status."',";
+		$sql.="'".$type."',";
+                $sql.="'".$type2."',";
+                $sql.="'".$titlo."',";
+		$sql.=$idtrag.",";
+                $sql.=$tele.")";      
+                        
+                        
+		
+		$query = $this->db->query($sql);
+		
+		if($query->num_rows()>0){
+			foreach ($query->result() as $fila){
+				$data[]=$fila;
+			}
+		return $data;
+		}
+		else{
+			$data[]="la consulta no se pudo ejecutar";
+		return $data;
+                
+		} 
+			
+	}
+        
+        function buscar_docente($carnet){
+	
+		$sql = "SELECT * FROM docente where carnet = ?";
+	
+		$query=$this->db->query($sql, array($carnet));// hace la consulta
+		$user=array();// define un array que tendra los datos.
+		foreach ($query->result_array() as $campo){
+			$user['carnet']=$campo['carnet'];
+			$user['id_carrera']=$campo['id_carrera'];
+			$user['id_telefono']=$campo['id_telefono'];
+			$user['nombres_p']=$campo['nombres_p'];
+			$user['apellidos_p']=$campo['apellidos_p'];
+			$user['direccion_p']=$campo['direccion_p'];	//darle formato al array para que pueda llenar el formulario
+                        $user['correo_p']=$campo['correo_p'];
+			$user['titulo']=$campo['titulo'];
+			$user['estado_persona']=$campo['estado_persona'];	
+		}		
+		
+		return $user;// retorna el array al controlador
+		
+		
+	}
         
         
 }

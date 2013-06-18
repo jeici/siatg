@@ -131,6 +131,100 @@ class Persona extends CI_Controller{
          }
             }
            }
+        //martin
+        //funcion para escoger que tipo de usuario se modificara
+	function seleccionar_tipo(){
+		$data['title']='SISTEMA DE ADMINISTRACION DE TRABAJOS DE GRADUACION';//esta variable se imprime en el
+		//header en el tag title
+		$data['main_content']='form_tipo_per';
+		$data['title']='Modificar Persona';
+		$this->load->view('includes/template3',$data);
+        }
+        //recupera todos los usuarios de la tabla dba o administrador
+	function recuperar_persona(){
+		$tipo= $this->input->post('tipo');
+		
+		if($tipo==1){
+			$users= $this->per->obtener_docente();
+		}
+		else
+			$users=$this->per>obtener_estudiante();	
+	
+		$data['title']='SISTEMA DE ADMINISTRACION DE TRABAJOS DE GRADUACION';//esta variable se imprime en el
+		//header en el tag title
+		$data['main_content']='form_per';//user
+		$data['title']='Modificar Persona';
+		$data['users']=$users;
+		$data['tipo']=$tipo;
+		$this->load->view('includes/template4',$data);
+	}
+	
+		
+	
         
+        //llena el formulario modificacion
+	function modificar_per(){
+		$carnet=$this->input->post('carnet');
+		$tipo=$this->input->post('Tipo');
+		$item=$this->per->obtener_titulo();//obtener titulo
+		$niveles=$this->per->obtener_tg();//obtener nivel
+		echo $carnet;
+		echo $tipo;
+		if($tipo==1){
+			$user= $this->per->buscar_docente($carnet);
+			$tg=$this->per->buscar_tg($user['tg']);
+		}
+		else
+			$user=$this->per->buscar_docente($carnet);
+			//$tg=$this->per->buscar_tg($user['tg']);
+			//$telefono=$this->usuario->buscar_telefono($id);
+		print_r($carnet);
+		$data['title']='SISTEMA DE ADMINISTRACION DE TRABAJOS DE GRADUACION';//esta variable se imprime en el
+		//header en el tag title
+		$data['main_content']='form_modi_per';
+		$data['title']='Modificar Usuario';
+		$data['carnet']=$carnet; // el id del usuario recuperado
+		$data['Tipo']=$tipo; //tipo si es docente o estudiante la persona recuperada
+		$data['user']=$user; //asigna los datos de la tabla dba o administrador para que se usen en el formulario
+		$data['item']=$item; //asigno el array dentro de la variable data
+		$data['tg']=$niveles; //asigno el array nivel dentro de la variable data
+		$data['tg']=$tg; //asigna a array los campos de la tabla login del usuario seleccionado.
+		//$data['telefono']=$da;
+		$this->load->view('includes/template5',$data);
+		
+	}
+        
+         function actualizar_persona()
+	  {
+            
+            
+            //////////////////////////////////////////
+	      $carn = $this->input->post('carnet');
+	      $nombs = $this->input->post('nombres');
+	      $apell = $this->input->post('apellidos');
+	      $dire = $this->input->post('direccion');
+	      $mail = $this->input->post('correo');
+	      $state = $this->input->post('estado');
+              $tipe = $this->input->post('Tipo');
+              $title= $this->input->post('titulo');
+              $trabg = $this->input->post('tg');
+              $telef = $this->input->post('telefono');
+              $car = $this->input->post('carrera');
+              $tipe2 = $this->input->post('Tipo2');
+              
+              
+              
+              
+	    // $this->verificar_datos_persona();
+ $insert = $this->per->actualizar_persona($carn,$car,1,$nombs,$apell,$dire, $mail,$state,$tipe,$tipe2,$title,$trabg,$telef);
+                                       
+         foreach ($insert as $valor)
+         {
+            echo $valor->prc_mod_persona;
+            
+         }
+            
+	  }
+          
 }
 ?>
