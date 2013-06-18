@@ -44,7 +44,7 @@ Password:
 <span id="req_116" class="req">*</span>
 </label>
 <div>
-<input id="password" name="password" type="text" class="field text medium" value="" maxlength="20" tabindex="2" onkeyup="" required />
+<input id="password" name="password" type="password" class="field text medium" value="" maxlength="20" tabindex="2" onkeyup="" required />
 </div>
 </li>
 
