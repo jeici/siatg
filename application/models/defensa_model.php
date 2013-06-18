@@ -30,7 +30,7 @@ class Defensa_model extends CI_Controller{
                 	
                     }
                     
-        /*modificar  update*/
+        /*modificar   update*/
     function obtener_def(){
                 
             $query=$this->db->query("SELECT * FROM defensa;");

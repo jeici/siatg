@@ -70,7 +70,7 @@ class Defensa extends CI_Controller{
         
     }
     
-    /*modificar defensa*/
+    /*modificar  defensa*/
     function seleccionar_def(){
         
             $this->load->model('defensa_model');

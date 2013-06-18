@@ -180,7 +180,7 @@
 		
 		<div>
 			<?php echo form_input($data7);?>
-			<?php //echo  form_error('correo');?>
+			<?php //echo   form_error('correo');?>
 		</div>
 	</li>
 <li id="foli12" class="notranslate      ">
