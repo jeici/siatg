@@ -37,11 +37,15 @@ class Defensa extends CI_Controller{
     }
     
     function recibir_datos(){
+        $this->load->library('form_validation');
         $this->form_validation->set_rules('tg', 'tema de trabajo de graduacion', 'required');
-        $this->form_validation->set_rules('datepicker', 'fecha defensa', 'required');
-        $this->form_validation->set_rules('numdefensa', 'numero de defensa', 'required');
-        $this->form_validation->set_message('required', 'este campo es requerido');
-        if ($this->form_validation->run() == FALSE)
+        //$this->form_validation->set_rules('datepicker', 'fecha defensa', 'required');
+        //$this->form_validation->set_rules('numdefensa', 'numero de defensa', 'required');
+        //$this->form_validation->set_rules('inidefensa', 'hora inicio', 'required|');
+        //$this->form_validation->set_message('required', 'este campo es requerido');
+       
+        $this->form_validation->set_rules('datepicker', 'Fecha defensa', 'trim|required|xss_clean');
+        if (($this->form_validation->run() == FALSE) or ($this->input->post('inidefensa') > $this->input->post('findefensa')))
         {
             $this->usuario();
         }
@@ -57,6 +61,7 @@ class Defensa extends CI_Controller{
             
                         
             $this->defensa_model->agregar_defensa($a1,$a2,$a3,$a4,$a5);
+            //$this->usuario();
         }  
         
         
