@@ -155,6 +155,290 @@ class Usuario_model extends CI_Controller{
 			return $data;
 		}
 	}
+	
+	
+	function obtener_busqueda_carrera(){
+		$query= $this->db->query("SELECT * FROM carrera;");
+		$item=array();
+	
+		foreach ($query->result_array() as $campo){
+			$item[$campo['nombre_carrera']]=$campo['nombre_carrera'];	//darle formato al array para que me funcione con el dropbox
+		}
+	
+		return $item;
+	}
+	
+	function obtener_busqueda_nivel(){
+		$query=$this->db->query("SELECT * FROM nivel;");
+		$niveles=array();
+		foreach($query->result_array() as $campo){
+			$niveles[$campo['tipo']]=$campo['tipo'];
+		}
+		return $niveles;
+	}
+	
+/////////////////////GENERAR LA VISTA///////////////////////////////////////////////////////////////////////////////	
+	function generar_vista($nombre,$carrera,$tipo,$nivel){
+		//cualquier nombre
+		if($nombre==''){
+			switch($tipo){
+			//todos los usuarios
+			case 0:
+				//todos los niveles
+				if($nivel=='0'){
+					//todas las carreras
+					if($carrera=='0'){
+						$query=$this->db->query("SELECT * FROM vis_total");
+						$resultado=$query->result_array();
+						
+					}// if carrera
+					else{
+						$sql="SELECT *FROM vis_total WHERE nombre_carrera= ?";
+						$query=$this->db->query($sql,$carrera);	
+						$resultado=$query->result_array();
+					
+						
+					}//fin else carrera
+					
+				}//fin if nivel
+				else{
+					if($carrera=='0'){
+						$sql="SELECT * FROM vis_total WHERE tipo= ?";
+						$query=$this->db->query($sql,array($nivel));
+						$resultado=$query->result_array();
+					
+						
+					}// if carrera
+					else{
+						$sql="SELECT *FROM vis_total WHERE tipo= ? AND nombre_carrera= ?";
+						$query=$this->db->query($sql,array($nivel,$carrera));
+						$resultado=$query->result_array();
+					
+						
+					}//fin else carrera
+					
+				}//else nivel
+				
+				break;
+//--------------------------------------------------------------------------------------------------------------				
+			//solo los dba
+			case 1:
+				//todos los niveles
+				if($nivel=='0'){
+					//todas las carreras
+					if($carrera=='0'){
+						$query=$this->db->query("SELECT * FROM vis_dba");
+						$resultado=$query->result_array();
+					
+						
+					}// if carrera
+					else{
+						$sql="SELECT *FROM vis_dba WHERE nombre_carrera= ?";
+						$query=$this->db->query($sql,$carrera);
+						$resultado=$query->result_array();
+					
+					
+					}//fin else carrera
+						
+				}//fin if nivel
+				else{
+					if($carrera=='0'){
+						$sql="SELECT * FROM vis_dba WHERE tipo= ?";
+						$query=$this->db->query($sql,array($nivel));
+						$resultado=$query->result_array();
+					
+						
+					}// if carrera
+					else{
+						$sql="SELECT *FROM vis_dba WHERE tipo= ? AND nombre_carrera= ?";
+						$query=$this->db->query($sql,array($nivel,$carrera));
+						$resultado=$query->result_array();
+					;
+						
+					}//fin else carrera
+						
+				}//else nivel
+				
+				break;
+//-------------------------------------------------------------------------------------------------------------------				
+			//solo los administradores	
+			case 2:
+				
+				//todos los niveles
+				if($nivel=='0'){
+					//todas las carreras
+					if($carrera=='0'){
+						$query=$this->db->query("SELECT * FROM vis_admin");
+						$resultado=array();
+						$resultado=$query->result_array();
+					
+					}// if carrera
+					else{
+						$sql="SELECT *FROM vis_admin WHERE nombre_carrera= ?";
+						$query=$this->db->query($sql,$carrera);
+						$resultado=$query->result_array();
+					
+						
+					}//fin else carrera
+						
+				}//fin if nivel
+				else{
+					if($carrera=='0'){
+						$sql="SELECT * FROM vis_admin WHERE tipo= ?";
+						$query=$this->db->query($sql,array($nivel));
+						$resultado=$query->result_array();
+					
+					}// if carrera
+					else{
+						$sql="SELECT *FROM vis_admin WHERE tipo= ? AND nombre_carrera= ?";
+						$query=$this->db->query($sql,array($nivel,$carrera));
+						$resultado=$query->result_array();
+					
+					}//fin else carrera
+						
+				}//else nivel
+				
+				
+			break;
+			}//fin switch tipo
+		}//if if nombre
+//*************************************************************************************************************************		
+		//buscar con el nombre especificado existe
+		else{
+			switch($tipo){
+				//todos los usuarios
+				case 0:
+					//todos los niveles
+					if($nivel=='0'){
+						//todas las carreras
+						if($carrera=='0'){
+							$sql= "SELECT * FROM vis_total WHERE nombre like '%$nombre%' ;";
+							$query=$this->db->query($sql);
+							$resultado=$query->result_array();
+							
+							
+						}// if carrera
+						else{
+							$sql="SELECT *FROM vis_total WHERE nombre_carrera= ? AND nombre like '%$nombre%'";
+							$query=$this->db->query($sql,array($carrera));
+							$resultado=array();
+							$resultado=$query->result_array();
+							
+						}//fin else carrera
+							
+					}//fin if nivel
+					else{
+						if($carrera=='0'){
+							$sql="SELECT * FROM vis_total WHERE tipo= ? AND nombre like '%$nombre%'";
+							$query=$this->db->query($sql,array($nivel));
+							$resultado=$query->result_array();
+						
+						}// if carrera
+						else{
+							$sql="SELECT *FROM vis_total WHERE tipo= ? AND nombre_carrera= ? AND nombre like '%$nombre%'";
+							$query=$this->db->query($sql,array($nivel,$carrera));
+							$resultado=$query->result_array();
+						
+						
+						}//fin else carrera
+							
+					}//else nivel
+			
+					break;
+					//--------------------------------------------------------------------------------------------------------------
+					//solo los dba
+				case 1:
+					//todos los niveles
+					if($nivel=='0'){
+						//todas las carreras
+						if($carrera=='0'){
+							$sql="SELECT * FROM vis_dba WHERE nombre like '%$nombre%'";
+							$query=$this->db->query($sql);
+							$resultado=$query->result_array();
+				
+							
+						}// if carrera
+						else{
+							$sql="SELECT *FROM vis_dba WHERE nombre_carrera= ? AND nombre like '%$nombre%'";
+							$query=$this->db->query($sql,array($carrera));
+							$resultado=$query->result_array();
+							
+						
+						}//fin else carrera
+			
+					}//fin if nivel
+					else{
+						if($carrera=='0'){
+							$sql="SELECT * FROM vis_dba WHERE tipo= ? AND nombre like '%$nombre%'";
+							$query=$this->db->query($sql,array($nivel));
+							$resultado=$query->result_array();
+							return $resultado;
+						
+						}// if carrera
+						else{
+							$sql="SELECT *FROM vis_dba WHERE tipo= ? AND nombre_carrera= ? AND nombre like '%$nombre%'";
+							$query=$this->db->query($sql,array($nivel,$carrera));
+							$resultado=$query->result_array();
+						
+						
+						}//fin else carrera
+			
+					}//else nivel
+			
+					break;
+					//-------------------------------------------------------------------------------------------------------------------
+					//solo los administradores
+				case 2:
+			
+					//todos los niveles
+					if($nivel=='0'){
+						//todas las carreras
+						if($carrera=='0'){
+							$sql="SELECT * FROM vis_admin WHERE nombre like '%$nombre%'";
+							$query=$this->db->query($sql);
+						
+							$resultado=$query->result_array();
+						
+							
+						}// if carrera
+						else{
+							$sql="SELECT *FROM vis_admin WHERE nombre_carrera= ? AND nombre like '%$nombre%'";
+							$query=$this->db->query($sql,array($carrera));
+							
+							$resultado=$query->result_array();
+						
+						
+						}//fin else carrera
+			
+					}//fin if nivel
+					else{
+						if($carrera=='0'){
+							$sql="SELECT * FROM vis_admin WHERE tipo= ? AND nombre like '%$nombre%'";
+							$query=$this->db->query($sql,array($nivel));
+							$resultado=$query->result_array();
+						
+							
+						}// if carrera
+						else{
+							$sql="SELECT *FROM vis_admin WHERE tipo= ? AND nombre_carrera= ? AND nombre like '%$nombre%'";
+							$query=$this->db->query($sql,array($nivel,$carrera));
+							$resultado=$query->result_array();
+							
+							
+						}//fin else carrera
+			
+					}//else nivel
+			
+			
+					break;
+			}//fin switch tipo
+			
+		}//fin else nombre
+		
+		return $resultado;
+	}// fin function
+	
+	
 
 }
 ?>
