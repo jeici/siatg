@@ -194,8 +194,6 @@ class Usuario extends CI_Controller{
 		$carrera=$this->input->post('carrera');
 		$tipo = $this->input->post('tipo');
 		$nivel=$this->input->post('nivel');
-		print_r($carrera);
-		print_r($nivel);
 		
 		$resultado= $this->usuario->generar_vista($nombre,$carrera,$tipo,$nivel);
 		
