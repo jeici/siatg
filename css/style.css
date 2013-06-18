@@ -7,7 +7,6 @@
 
 #header{
     height: 40px;
-    background-color: #D8D8BF;
     color: crimson;
 }
 #center{
@@ -16,9 +15,7 @@ display:block;
 header h2{
 text-align:center;}
 
-body {
-background-color:white;
-}
+
 caption{
     caption-side:top;
     margin-bottom:20px;
@@ -151,7 +148,7 @@ h3{
 
 footer p{
 
-    color:#05316d;
+    color:white;
 
     text-align:right;
 
@@ -175,15 +172,15 @@ footer a:visited{
 }
 footer{
 
-    height:50px;
+    height:20px;
 
     clear:both;
 
     font-family:amaranth,verdana;
 
-    width:640px;
+    width:630px;
 
-    padding:8px;
+    padding:5px;
 
     margin-left:auto;
 
@@ -191,7 +188,7 @@ footer{
 
     margin-right:auto;
 
-    margin-top:10px;
+    margin-top:5px;
 
     border:1px;
 
@@ -199,14 +196,11 @@ footer{
 
     text-align:center;
 
-    border-top-color:#D8D8BF;
+   background-color:#9f0013;
+    border-color:#D8D8BF;
 
-    border-bottom-color:White;
-
-    border-left-color:White;
-
-    border-right-color:White;
-
+   
+   
 
 
     }

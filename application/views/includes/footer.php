@@ -12,6 +12,6 @@
 <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 <footer>
-   <p>Derechos Reservados 2013</p>
+   <p>Derechos Reservados &copy 2013</p>
 </footer>
 </html>
