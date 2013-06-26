@@ -41,6 +41,7 @@ LOGEO
         $data2 = array(
               'name'        => 'password',
               'id'          => 'password',
+            'type' => 'password',
                 'maxlength'   => '20',
 		'size'        => '20',
             'placeholder' => 'Digite la contraseña',
