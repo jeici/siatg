@@ -140,6 +140,17 @@
             </li>
             <li><a class="fNiv"></a></li>
             
+            <li>
+                <a class="fNiv">Cerrar Sesión</a>
+                <ul>
+                    <li class="arrow"></li>
+                    <li><a href="<?php echo base_url();?>index.php/asesoria/">Cerrar Sesión</a></li>
+                    
+                   
+                </ul>
+            </li>
+            <li><a class="fNiv"></a></li>
+            
         </ul>
 
         <script type="text/javascript">
