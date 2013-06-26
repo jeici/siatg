@@ -11,9 +11,7 @@ class Datos_upd_ase extends CI_Controller
          
          if($this->session->userdata['username'] == TRUE)
                 {
-        echo $this->session->userdata['username'];
-        echo "</t>";
-        echo $this->session->userdata['password'];
+        
         //$this->session->sess_destroy();
                 }
            else{
