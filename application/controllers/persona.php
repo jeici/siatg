@@ -218,12 +218,13 @@ class Persona extends CI_Controller{
               $telef = $this->input->post('telefono');
               $car = $this->input->post('carrera');
               $tipe2 = $this->input->post('Tipo2');
+              $idtelef=$this->input->post('idtel');
               
               
               
               
 	    // $this->verificar_datos_persona();
- $insert = $this->per->actualizar_persona($carn,$car,1,$nombs,$apell,$dire, $mail,$state,$tipe,$tipe2,$title,$trabg,$telef);
+ $insert = $this->per->actualizar_persona($carn,$car,$idtelef,$nombs,$apell,$dire, $mail,$state,$tipe,$tipe2,$title,$trabg,$telef);
                                        
          foreach ($insert as $valor)
          {
