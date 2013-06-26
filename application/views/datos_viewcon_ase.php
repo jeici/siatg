@@ -4,7 +4,7 @@
         <script type="text/javascript">
             //función encargada de procesar la solicitud al pulsar el botón pasar_edicion
             function saltar(id){
-                $("#editar").load("<?php echo base_url();?>/index.php/datos_upd_ase/mostrar_datos", { id: id});
+                $("#editar").load("<?php echo base_url();?>/index.php/datos_con_ase/mostrar_datos", { id: id});
                 $("#editar").fadeIn('2000');
                 
             }
@@ -39,7 +39,7 @@
                     <td><?= $fila->num_asesoria ?></td>
                     <td><?= $fila->fecha_asesoria ?></td>
                     <td><?= $fila->hora_asesoria ?></td>
-                    <td><?= form_button($boton, 'Editar') ?></td>
+                    
                 </tr>
                 <?php
             endforeach;

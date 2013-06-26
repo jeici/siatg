@@ -134,7 +134,7 @@
                     <li class="arrow"></li>
                     <li><a href="<?php echo base_url();?>index.php/asesoria/">Agregar Asesoria</a></li>
                     <li><a href="<?php echo base_url();?>index.php/datos_upd_ase">Modificar Asesoria</a></li>
-                   <li><a href="<?php echo base_url();?>index.php/datos_upd_ase">Consultar Asesoria</a></li>
+                   <li><a href="<?php echo base_url();?>index.php/datos_con_ase">Consultar Asesoria</a></li>
                    
                 </ul>
             </li>

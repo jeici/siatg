@@ -146,7 +146,7 @@ $('#datepicker').datepicker('option', {dateFormat: 'yy/mm/dd'});
 </fieldset>
  
 <div>
-<?php echo form_submit('ingresar','Ingresar Persona');?>
+<?php echo form_submit('ingresar','Ingresar Asesoría');?>
                     
  </div>
 </li>

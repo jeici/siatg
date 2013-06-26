@@ -1,5 +1,5 @@
 <?php
-class Datos_upd_ase extends CI_Controller
+class Datos_con_ase extends CI_Controller
 {    
     function __construct()
     {        
@@ -25,7 +25,7 @@ class Datos_upd_ase extends CI_Controller
     function index()
     {
         $data['titulo'] = 'Modificar Asesoria';
-        $data['main_content']='datos_view_ase';
+        $data['main_content']='datos_viewcon_ase';
         $data['mensajes'] = $this->asesoria_model->mensajes();
         //$this->load->view('datos_view_ase',$data);
         $this->load->view('includes/template8',$data); 
@@ -68,7 +68,7 @@ class Datos_upd_ase extends CI_Controller
             $submit = array(
                 'name' => 'editando',
                 'id' => 'editando',
-                'value' => 'Modificar Mensaje'
+                'value' => 'Modificar Asesoría'
             );
             $oculto = array(
                 'id' => $id
@@ -76,19 +76,7 @@ class Datos_upd_ase extends CI_Controller
                );
              
             //mostramos el formulario con los datos cargados
-            ?>
-            <?= form_open('datos_upd_ase/actualizar_datos','', $oculto) ?>
-            <?= form_label('Id Trabajo de Graduación') ?>
-            <?= form_input($idtrab) ?>
-            <?= form_label('Numero Asesoria') ?>
-            <?= form_input($numa) ?>
-            <?= form_label('Fecha Asesoría') ?>
-            <?= form_input($date) ?>
-            <?= form_label('Hora Asesoria') ?>
-            <?= form_textarea($hour) ?>
- 
-            <?= form_submit($submit) ?>
-            <?php    
+            
             }    
            //función encargada de actualizar los datos    
            function actualizar_datos()    
