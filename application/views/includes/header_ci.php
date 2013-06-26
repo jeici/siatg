@@ -79,7 +79,7 @@
                         <ul>
                             <li><a href="<?php echo base_url();?>index.php/defensa/usuario">Programar Defensa</a></li>
                             <li><a href="<?php echo base_url();?>index.php/defensa/seleccionar_def">Reprogramar Defensa</a></li>
-                            <li><a href="<?php echo base_url();?>index.php/defensa/seleccionar_def">Consultar Defensa</a></li>
+                            <li><a href="<?php echo base_url();?>index.php/defensa/consultar_def">Consultar Defensa</a></li>
                            <!-- <li><a>Category 4.3</a></li>-->
                         </ul>
                     </li>

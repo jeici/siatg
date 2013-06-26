@@ -120,6 +120,20 @@ class Defensa extends CI_Controller{
                 $this->defensa_model->modificar_def($a1,$a2,$a3,$a4,$a5,$a6);
                 
      }
+     
+      function consultar_def(){
+        
+            $this->load->model('defensa_model');
+            $nivel= $this->defensa_model->obtener_def();
+            
+		$data['title']='SISTEMA DE ADMINISTRACION DE TRABAJOS DE GRADUACION';//esta variable se imprime en el
+		//header en el tag title
+		$data['main_content']='form_consultar_def';
+		$data['title']='Modificar Defensa';
+                $data['nivel']=$nivel;
+		$this->load->view('includes/templatej',$data);       
+		
+	}
     
 }
 
