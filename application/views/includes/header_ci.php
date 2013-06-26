@@ -144,7 +144,7 @@
                 <a class="fNiv">Cerrar Sesión</a>
                 <ul>
                     <li class="arrow"></li>
-                    <li><a href="<?php echo base_url();?>index.php/asesoria/">Cerrar Sesión</a></li>
+                    <li><a href="<?php echo base_url();?>index.php/cerrar/usuario">Cerrar Sesión</a></li>
                     
                    
                 </ul>
