@@ -165,32 +165,39 @@ class Persona extends CI_Controller{
         //llena el formulario modificacion
 	function modificar_per(){
 		$carnet=$this->input->post('id');
-		$tipo=$this->input->post('Tipo');
-		$item=$this->per->obtener_titulo();//obtener titulo
-		$niveles=$this->per->obtener_tg();//obtener nivel
-		echo $carnet;
-		echo $tipo;
-		if($tipo==1){
+		$tipo=$this->input->post('tipo');
+		$niveles=$this->per->obtener_tg();
+		$item=$this->per->obtener_carrera();
+		//echo $carnet;
+		//echo $tipo;
+		$tg= 0;
+		//print_r($niveles);
+		if($tipo == 1){
 			$user= $this->per->buscar_docente($carnet);
-			$tg=$this->per->buscar_tg($user['tg']);
+			//print_r($user);
+			
+			
 		}
-		else
+		if($tipo== 2){
 			$user=$this->per->buscar_estudiante($carnet);
+			//$tg=$this->per->buscar_tg($user['tg']);	
+			//print_r($user);
+			
+		}
 			//$tg=$this->per->buscar_tg($user['tg']);
-			//$telefono=$this->usuario->buscar_telefono($id);
-		//print_r($carnet);
+			$telefono=$this->per->buscar_telefono($user['id_telefono']);
 		$data['title']='SISTEMA DE ADMINISTRACION DE TRABAJOS DE GRADUACION';//esta variable se imprime en el
 		//header en el tag title
 		$data['main_content']='form_modi_per';
 		$data['title']='Modificar Persona';
-		$data['id']=$carnet; // el id del usuario recuperado
-		$data['tipo']=$tipo; //tipo si es docente o estudiante la persona recuperada
-		$data['user']=$user; //asigna los datos de la tabla dba o administrador para que se usen en el formulario
-		$data['item']=$item; //asigno el array dentro de la variable data
-		$data['tg']=$niveles; //asigno el array nivel dentro de la variable data
-		$data['tg']=$tg; //asigna a array los campos de la tabla login del usuario seleccionado.
-		//$data['telefono']=$da;
-		$this->load->view('includes/template5',$data);
+		$data['id']=$carnet; 
+		$data['tipo']=$tipo; 
+		$data['user']=$user; 
+		$data['item']=$item; 
+		$data['tg']=$niveles; 
+		//$data['trabajo']=$tg; 
+		$data['telefono']=$telefono;
+		$this->load->view('includes/template7',$data);
 		
 	}
         
