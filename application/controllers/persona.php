@@ -233,6 +233,33 @@ class Persona extends CI_Controller{
          }
             
 	  }
-          
+       
+          //funcion para escoger que tipo de usuario se modificara
+	function  consultar_tipo(){
+		$data['title']='SISTEMA DE ADMINISTRACION DE TRABAJOS DE GRADUACION';//esta variable se imprime en el
+		//header en el tag title
+		$data['main_content']='form_consultartipo_per';
+		$data['title']='Consultar Persona';
+		$this->load->view('includes/template3',$data);
+        }
+        
+        //recupera todos los usuarios de la tabla dba o administrador
+	function consultar_persona(){
+		$tipo= $this->input->post('tipo');
+		
+		if($tipo==1){
+			$users= $this->per->obtener_docente();
+		}
+		else
+			$users=$this->per->obtener_estudiante();	
+	
+		$data['title']='SISTEMA DE ADMINISTRACION DE TRABAJOS DE GRADUACION';//esta variable se imprime en el
+		//header en el tag title
+		$data['main_content']='form_consultar_per';//user
+		$data['title']='Consultar Persona';
+		$data['users']=$users;
+		$data['tipo']=$tipo;
+		$this->load->view('includes/template4',$data);
+	}
 }
 ?>

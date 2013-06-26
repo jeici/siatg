@@ -15,7 +15,7 @@
                         <ul>
                             <li><a href="<?php echo base_url();?>index.php/persona">Agregar Personal</a></li>
                             <li><a href="<?php echo base_url();?>index.php/persona/seleccionar_tipo">Modificar Personal</a></li>
-                            <li><a href="<?php echo base_url();?>index.php/persona/seleccionar_tipo">Consultar Personal</a></li>
+                            <li><a href="<?php echo base_url();?>index.php/persona/consultar_tipo">Consultar Personal</a></li>
                            
                         </ul>
                     </li>
