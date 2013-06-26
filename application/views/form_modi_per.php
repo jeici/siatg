@@ -69,7 +69,7 @@ Datos personales
          $data_tel = array(
               'name'        => 'telefono',
               'id'          => 'id_telefono',
-              'value'       => $telefono['id_telefono'],
+              'value'       => $telefono['telefono'],
               'maxlength'   => '9',
               'size'        => '50',
               
@@ -267,7 +267,8 @@ Carrera
     
     
 <div>
-<?php echo form_submit('ingresar','Actualizar Usuario');?>
+<?php echo form_submit('ingresar','Actualizar Usuario');
+echo form_hidden('idtel',$user['id_telefono']);?>
                     
  </div>
 </li>
