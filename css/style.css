@@ -424,7 +424,7 @@ p{
 
     font-family:krazynights;
 
-    src:url"/fonts/krazynights-webfont.ttf");
+    src:url("/fonts/krazynights-webfont.ttf");
 
 }
 
@@ -530,6 +530,9 @@ padding: 8px 14px 9px;
 
 .red.button, .red.button:visited { background-color: #E62727; }
 .red.button:hover{ background-color: #CF2525; }
+
+.redues.button, .redues.button:visited { background-color: #A50606; }
+.redues.button:hover{ background-color: #D80A0A; }
 
 .orange.button, .orange.button:visited { background-color: #FF5C00; }
 .orange.button:hover{ background-color: #D45500; }
