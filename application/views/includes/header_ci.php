@@ -17,62 +17,12 @@
                             <li><a href="<?php echo base_url();?>index.php/persona/seleccionar_tipo">Modificar Personal</a></li>
                             <li><a href="<?php echo base_url();?>index.php/persona/seleccionar_tipo">Consultar Personal</a></li>
                            
-                            <li>
-                                <!--<a>Category 1.3</a>-->
-                                <ul>
-                                   <li><a>Category 1.4</a></li>
-                                    <li><a>Category 1.4</a></li>
-                                    <li><a>Category 1.4</a></li>
-                                    <li>
-                                        <a>Category 1.4</a>
-                                        <ul>
-                                            <li><a>Category 1.5</a></li>
-                                            <li><a>Category 1.5</a></li>
-                                            <li>
-                                                <a>Category 1.5</a>
-                                                <ul>
-                                                    <li><a>Category 1.6</a></li>
-                                                    <li><a>Category 1.6</a></li>
-                                                    <li><a>Category 1.6</a></li>
-                                                    <li><a>Category 1.6</a></li>
-                                                    <li><a>Category 1.6</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li><a>Category 1.4</a></li>
-                                    <li><a>Category 1.4</a></li>
-                                </ul>
-                            </li>
-                           <!-- <li><a>Category 1.3</a></li>-->
                         </ul>
                     </li>
-                    <li><a>Category 1.2</a></li>
-                    <li>
-                        <a>Category 1.2</a>
-                        <ul>
-                            <li><a>Category 1.3</a></li>
-                            <li>
-                                <a>Category 1.3</a>
-                                <ul>
-                                    <li><a>Category 1.4</a></li>
-                                    <li><a>Category 1.4</a></li>
-                                    <li><a>Category 1.4</a></li>
-                                    <li><a>Category 1.4</a></li>
-                                    <li><a>Category 1.4</a></li>
-                                    <li><a>Category 1.4</a></li>
-                                    <li><a>Category 1.4</a></li>
-                                    <li><a>Category 1.4</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a>Category 1.2</a></li>
-                </ul>
-            </li>
-
-            <li>
-                <a class="fNiv">Usuarios</a>
+                   </ul>  
+                  </li> 
+                  <li>          
+                  <a class="fNiv">Usuarios</a>
                 <ul>
                     <li class="arrow"></li>
                     <li>
@@ -85,27 +35,7 @@
                             
                         </ul>
                     </li>
-                    <li>
-                        <a>Category 2.2</a>
-                        <ul>
-                            <li><a>Category 2.3</a></li>
-                            <li><a>Category 2.3</a></li>
-                            <li><a>Category 2.3</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a>Category 2.2</a>
-                        <ul>
-                            <li><a>Category 2.3</a></li>
-                            <li><a>Category 2.3</a></li>
-                            <li><a>Category 2.3</a></li>
-                            <li><a>Category 2.3</a></li>
-                            <li><a>Category 2.3</a></li>
-                            <li><a>Category 2.3</a></li>
-                        </ul>
-                    </li>
-                    <li><a>Category 2.2</a></li>
-                </ul>
+                                   </ul>
             </li>
 
             <li>
@@ -133,7 +63,7 @@
                         </ul>
                     </li>
                     <li><a>Asesoria</a></li>
-                   <li><a>Category 3.2</a></li>
+                  
                 </ul>
             </li>
 
