@@ -9,6 +9,21 @@ class Usuario extends CI_Controller{
 		$this->load->helper('form');
 		$this->load->library('form_validation');
 		$this->load->model('usuario_model','usuario',TRUE);
+                
+                
+                
+                if($this->session->userdata['username'] == TRUE)
+                {
+        echo $this->session->userdata['username'];
+        echo "</t>";
+        echo $this->session->userdata['password'];
+        //$this->session->sess_destroy();
+                }
+           else{
+                    echo 'No estas LOGEADO';
+                    redirect(base_url());
+               //$this->session->sess_destroy();
+           }
 
 	}
 

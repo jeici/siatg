@@ -18,7 +18,7 @@ class Logeo_model extends CI_Controller{
                 $sql= "SELECT nick from login where nick=? and clave=?;";
 
 		$query = $this->db->query($sql,array($a1,$a2));
-                echo 'modelo';
+                //echo 'modelo';
                 printf($a1);
                 printf($a2);
                 

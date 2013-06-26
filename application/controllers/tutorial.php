@@ -12,6 +12,20 @@ class Tutorial extends CI_Controller{
                // $this->load->model('persona_model','per',TRUE);
               
 
+                
+                if($this->session->userdata['username'] == TRUE)
+                {
+        echo $this->session->userdata['username'];
+        echo "</t>";
+        echo $this->session->userdata['password'];
+        //$this->session->sess_destroy();
+                }
+           else{
+                    echo 'No estas LOGEADO';
+                    redirect(base_url());
+               //$this->session->sess_destroy();
+           }
+                
 	}
 
 
