@@ -30,7 +30,7 @@ Datos personales
         $data_carnet = array(
               'name'        => 'carnet',
               'id'          => 'id_carnet',
-              'value'       => set_value('carnet'),
+              'value'       => $id,
               'maxlength'   => '7',
               'size'        => '15',
              
@@ -39,7 +39,7 @@ Datos personales
         $data_nombres = array(
               'name'        => 'nombres',
               'id'          => 'id_nombre',
-              'value'       => set_value('nombres'),
+              'value'       => $user['nombres_p'],
               'maxlength'   => '50',
               'size'        => '50',
               
@@ -48,7 +48,7 @@ Datos personales
         $data_apellidos = array(
               'name'        => 'apellidos',
               'id'          => 'id_apellidos',
-              'value'       => set_value('apellidos'),
+              'value'       => $user['apellidos_p'],
               'maxlength'   => '50',
               'size'        => '50',
               
@@ -57,7 +57,7 @@ Datos personales
         $data_dir = array(
               'name'        => 'direccion',
               'id'          => 'id_apellidos',
-              'value'       => set_value('apellidos'),
+              'value'       => $user['direccion_p'],
               'width'       => '50',
               'rows '       => '10',
               'cols'        => '50',
@@ -69,7 +69,7 @@ Datos personales
          $data_tel = array(
               'name'        => 'telefono',
               'id'          => 'id_telefono',
-              'value'       => set_value('telefono'),
+              'value'       => $telefono['id_telefono'],
               'maxlength'   => '9',
               'size'        => '50',
               
@@ -78,7 +78,7 @@ Datos personales
         $data_correo = array(
               'name'        => 'correo',
               'id'          => 'id_correo',
-              'value'       => set_value('correo'),
+              'value'       => $user['correo_p'],
               'maxlength'   => '50',
               'size'        => '50',
               
@@ -93,16 +93,27 @@ Datos personales
                   2  => 'Estudiante',
                   
                 );
-
+if($tipo == 1){
         $data_titulo = array(
               'name'        => 'titulo',
               'id'          => 'id_titulo',
-              'value'       => set_value('titulo'),
+              'value'       => $user['titulo'],
               'maxlength'   => '50',
               'size'        => '50',
               
               'placeholder' => 'Digite el Título',
             );
+}
+else{
+	$data_titulo = array(
+		'name'        => 'titulo',
+		'id'          => 'id_titulo',
+		'maxlength'   => '50',
+		'size'        => '50',
+
+		'placeholder' => 'Digite el Título',
+);
+}
        /* $data_tg = array(
               'name'        => 'tg',
               'id'          => 'id_tg',
@@ -112,8 +123,9 @@ Datos personales
               
               'placeholder' => 'Digite el ID de trabajo de Graduación',
             );*/
-        $data_tg=$item;//recupero el array aqui.
-        $data_carrera=$item2;//recupero el array aqui.
+        //recupero el array aqui.
+        $data_tg=$tg;
+        $data_carrera=$item;//recupero el array aqui.
         ?>
     
 
@@ -171,7 +183,7 @@ Teléfono
 </label>
 <div>
 <?php echo form_input($data_tel);?>
-<?php echo form_error('nombre');?>
+<?php echo form_error('telefono');?>
 </div>
 </li>
 <li id="foli11" class="notranslate      ">
@@ -238,13 +250,13 @@ Tipo
 Tema Trabajo de Graduación
 </label>
     
-<?php echo form_dropdown('tg', $data_tg,1);
+<?php echo form_dropdown('tg', $data_tg,$user['id_trabajog']);
 //<?php echo form_error('titulo');?>
 <label class="desc" id="title11" for="Field11">
 Carrera
 </label>
     
-<?php echo form_dropdown('carrera', $data_carrera,1);
+<?php echo form_dropdown('carrera', $data_carrera,$user['id_carrera']);
 //<?php echo form_error('titulo');?>    
     
 </div>
@@ -255,7 +267,7 @@ Carrera
     
     
 <div>
-<?php echo form_submit('ingresar','Ingresar Persona');?>
+<?php echo form_submit('ingresar','Actualizar Usuario');?>
                     
  </div>
 </li>
