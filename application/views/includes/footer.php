@@ -12,6 +12,6 @@
 <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 <footer>
-   <p>Derechos Reservados &copy 2013</p>
+   <p>Derechos Reservados &copy; 2013 &#124; <a href="<?php echo base_url();?>index.php/grupobad">JAMSET</a></p>
 </footer>
 </html>
