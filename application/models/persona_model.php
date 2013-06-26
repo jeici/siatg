@@ -100,8 +100,8 @@ class Persona_model extends CI_Controller{
 		$sql.="'".$type."',";
                 $sql.="'".$type2."',";
                 $sql.="'".$titlo."',";
-		$sql.=$idtrag.",";
-                $sql.=$tele.")";      
+		$sql.=$idtrag.",'";
+                $sql.=$tele."')";      
                         
                         
 		
