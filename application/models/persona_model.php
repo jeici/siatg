@@ -134,14 +134,55 @@ class Persona_model extends CI_Controller{
 			$user['nombres_p']=$campo['nombres_p'];
 			$user['apellidos_p']=$campo['apellidos_p'];
 			$user['direccion_p']=$campo['direccion_p'];	//darle formato al array para que pueda llenar el formulario
-                        $user['correo_p']=$campo['correo_p'];
+            $user['correo_p']=$campo['correo_p'];
 			$user['titulo']=$campo['titulo'];
 			$user['estado_persona']=$campo['estado_persona'];	
 		}		
-		
+		//print_r($user);
 		return $user;// retorna el array al controlador
 		
 		
+	}
+	
+	function buscar_estudiante($carnet){
+	
+		$sql = "SELECT * FROM estudiante where carnet = ?";
+	
+		$query=$this->db->query($sql, array($carnet));// hace la consulta
+		$user=array();// define un array que tendra los datos.
+		foreach ($query->result_array() as $campo){
+			$user['carnet']=$campo['carnet'];
+			$user['id_carrera']=$campo['id_carrera'];
+			$user['id_telefono']=$campo['id_telefono'];
+			$user['nombres_p']=$campo['nombres_p'];
+			$user['apellidos_p']=$campo['apellidos_p'];
+			$user['direccion_p']=$campo['direccion_p'];	//darle formato al array para que pueda llenar el formulario
+			$user['correo_p']=$campo['correo_p'];
+			$user['id_trabajog']=$campo['id_trabajog'];
+			$user['estado_persona']=$campo['estado_persona'];
+		}
+		//print_r($user);
+		return $user;// retorna el array al controlador
+	
+	
+	}
+	
+	function buscar_tg($tg){
+		$sql="SELECT id_trabajog FROM estudiante where carnet = ?";
+		$query=$this->db->query($sql,array($tg));
+		$item=$query->result_array();
+		return $item;
+	}
+	
+	function buscar_telefono($tel){
+		$sql="SELECT id_telefono,telefono FROM telefono WHERE id_telefono=?;";
+		$query=$this->db->query($sql,array($tel));
+		$item=array();
+		foreach($query->result_array() as $campo){
+			$item['id_telefono']=$campo['id_telefono'];
+			$item['telefono']=$campo['telefono'];
+		}
+		return $item;
 	}
         
         
