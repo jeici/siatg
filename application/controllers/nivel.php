@@ -90,6 +90,20 @@ class Nivel extends CI_Controller{
                 $this->nivel_model->modificar_nivel($id,$tipo);
                 
      }
+     
+     function consultar_nivel(){
+        
+            $this->load->model('nivel_model');
+            $nivel= $this->nivel_model->obtener_nivel();
+            
+		$data['title']='SISTEMA DE ADMINISTRACION DE TRABAJOS DE GRADUACION';//esta variable se imprime en el
+		//header en el tag title
+		$data['main_content']='form_consultar_nivel';
+		$data['title']='Modificar Nivel';
+                $data['nivel']=$nivel;
+		$this->load->view('includes/templatej',$data);       
+		
+	}
     
 }
 ?>

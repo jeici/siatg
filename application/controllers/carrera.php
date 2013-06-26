@@ -100,6 +100,20 @@ class Carrera extends CI_Controller{
                 $this->carrera_model->modificar_carr($a1,$a2,$a3);
                 
      }
+     
+     function consultar_carr(){
+        
+            $this->load->model('carrera_model');
+            $nivel= $this->carrera_model->obtener_carr();
+            
+		$data['title']='SISTEMA DE ADMINISTRACION DE TRABAJOS DE GRADUACION';//esta variable se imprime en el
+		//header en el tag title
+		$data['main_content']='form_consultar_carr';
+		$data['title']='Modificar Carrera';
+                $data['nivel']=$nivel;
+		$this->load->view('includes/templatej',$data);       
+		
+	}
     
 }
 
