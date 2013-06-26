@@ -7,15 +7,17 @@
     	<link rel="stylesheet" href="<?php echo base_url();?>css/bjqs.css">
 
 	    <!-- some pretty fonts for this demo page - not required for the slider -->
-	    <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro|Open+Sans:300' rel='stylesheet' type='text/css'> 
-	
+	    <!--<link href='http://fonts.googleapis.com/css?family=Source+Code+Pro|Open+Sans:300' rel='stylesheet' type='text/css'> -->
+            <link href='<?php echo base_url();?>css/css' rel='stylesheet' type='text/css'> 
+            
 	    <!-- demo.css contains additional styles used to set up this demo page - not required for the slider --> 
 	    <link rel="stylesheet" href="<?php echo base_url();?>css/demo.css">
 		<link rel="stylesheet" href="<?php echo base_url();?>jquery-ui.css" />
 	    <!-- load jQuery and the plugin -->
-	    <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-	    <script src="<?php echo base_url();?>js/bjqs-1.3.min.js"></script>
-	    
+	    <!--<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>-->
+            
+	    <script src="<?php echo base_url();?>js/jquery-1.7.1.min.js"></script>
+	     <script src="<?php echo base_url();?>js/bjqs-1.3.min.js"></script>
 		
                 
 		<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/style.css" media="screen"/>
