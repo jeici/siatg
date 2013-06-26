@@ -114,6 +114,20 @@ class Trabajograduacion extends CI_Controller{
                 $this->trabajog_model->modificar_tg($a1,$a2,$a3,$a4,$a5,$a6,$a7);
                 
      }
+     
+     function consultar_tg(){
+        
+            $this->load->model('trabajog_model');
+            $nivel= $this->trabajog_model->obtener_tg();
+            
+		$data['title']='SISTEMA DE ADMINISTRACION DE TRABAJOS DE GRADUACION';//esta variable se imprime en el
+		//header en el tag title
+		$data['main_content']='form_consultar_tg';
+		$data['title']='Modificar Trabajo de graduacion';
+                $data['nivel']=$nivel;
+		$this->load->view('includes/templatej',$data);       
+		
+	}
     
 }
 

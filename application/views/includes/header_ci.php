@@ -48,7 +48,7 @@
                         <ul>
                             <li><a href="<?php echo base_url();?>index.php/trabajograduacion/usuario">Agregar Trabajos de Graduación</a></li>
                             <li><a href="<?php echo base_url();?>index.php/trabajograduacion/seleccionar_tg">Modificar Trabajos de Graduación</a></li>
-                            <li><a href="<?php echo base_url();?>index.php/trabajograduacion/seleccionar_tg">Consultar Trabajos de Graduación</a></li>
+                            <li><a href="<?php echo base_url();?>index.php/trabajograduacion/consultar_tg">Consultar Trabajos de Graduación</a></li>
                       <!--  <li><a>Category 3.3</a></li>
                             <li><a>Category 3.3</a></li>
                             <li><a>Category 3.3</a></li>
