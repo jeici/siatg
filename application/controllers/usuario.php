@@ -151,6 +151,8 @@ class Usuario extends CI_Controller{
 		$this->load->view('includes/template5',$data);
 		
 	}
+        
+        
 	
 	function actualizar_usuario(){
 		
@@ -204,6 +206,68 @@ class Usuario extends CI_Controller{
 		$data['resultado']=$resultado;
 		$this->load->view('includes/template6',$data);
 		
+	}
+        //estas son las funciones que agregue martin a tu controlador 
+        function consultar_user(){
+		$id=$this->input->post('id');
+		$tipo=$this->input->post('tipo');
+		$item=$this->usuario->obtener_carrera();
+		$niveles=$this->usuario->obtener_nivel();
+		//echo $id;
+		//echo $tipo;
+		if($tipo==1){
+			$user= $this->usuario->buscar_dba($id);
+			$login=$this->usuario->buscar_login($user['nick']);
+		}
+		else
+			$user=$this->usuario->buscar_admin($id);
+			$login=$this->usuario->buscar_login($user['nick']);
+			$telefono=$this->usuario->buscar_telefono($id);
+		
+		$data['title']='SISTEMA DE ADMINISTRACION DE TRABAJOS DE GRADUACION';//esta variable se imprime en el
+		//header en el tag title
+		$data['main_content']='form_modi_user';
+		$data['title']='Modificar Usuario';
+		$data['id']=$id; // el id del usuario recuperado
+		$data['tipo']=$tipo; //tipo si es admin o dba el usuario recuperado
+		$data['user']=$user; //asigna los datos de la tabla dba o administrador para que se usen en el formulario
+		$data['item']=$item; //asigno el array dentro de la variable data
+		$data['nivel']=$niveles; //asigno el array nivel dentro de la variable data
+		$data['login']=$login; //asigna a array los campos de la tabla login del usuario seleccionado.
+		$data['telefono']=$telefono;
+		$this->load->view('includes/template5',$data);
+		
+	}
+        
+        
+        
+        
+        function seleccionar_tipo_consultar(){
+		$data['title']='SISTEMA DE ADMINISTRACION DE TRABAJOS DE GRADUACION';//esta variable se imprime en el
+		//header en el tag title
+		$data['main_content']='form_tipo_consultar_usuario';
+		$data['title']='Modificar Usuario';
+		$this->load->view('includes/template3',$data);
+		
+	}
+	
+	//recupera todos los usuarios de la tabla dba o administrador
+	function consultar_usuario(){
+		$tipo= $this->input->post('tipo');
+		
+		if($tipo==1){
+			$users= $this->usuario->obtener_dba();
+		}
+		else
+			$users=$this->usuario->obtener_admin();	
+	
+		$data['title']='SISTEMA DE ADMINISTRACION DE TRABAJOS DE GRADUACION';//esta variable se imprime en el
+		//header en el tag title
+		$data['main_content']='form_user_consultar';
+		$data['title']='Modificar Usuario';
+		$data['users']=$users;
+		$data['tipo']=$tipo;
+		$this->load->view('includes/template4',$data);
 	}
 
 }

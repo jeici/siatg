@@ -30,7 +30,8 @@
                         <ul>
                             <li><a href="<?php echo base_url();?>index.php/usuario">Agregar Usuario</a></li>
                             <li><a href="<?php echo base_url();?>index.php/usuario/seleccionar_tipo">Modificar Usuario</a></li>
-                            <li><a href="<?php echo base_url();?>index.php/usuario/buscar_usuario">Consultar Usuario</a></li>
+                            <li><a href="<?php echo base_url();?>index.php/usuario/buscar_usuario">Buscar Usuario</a></li>
+                            <li><a href="<?php echo base_url();?>index.php/usuario/seleccionar_tipo_consultar">Consultar Usuario</a></li>
                            
                             
                         </ul>
