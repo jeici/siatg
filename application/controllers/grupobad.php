@@ -1,13 +1,13 @@
 <?php
 //if (!defined('BASEPATH')) exit('No direct script access allowed');
-class Usuario extends CI_Controller{
+class Grupobad extends CI_Controller{
 	function __construct()
 	{
 		parent::__construct();
 		$this->load->helper('form');
 		$this->load->library('form_validation');
 		$this->load->database();
-		$this->load->model('grupobad_model',TRUE);
+		//$this->load->model('grupobad_model',TRUE);
 
 	}
 
