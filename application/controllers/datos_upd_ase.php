@@ -29,8 +29,8 @@ class Datos_upd_ase extends CI_Controller
         $data['titulo'] = 'Modificar Asesoria';
         $data['main_content']='datos_view_ase';
         $data['mensajes'] = $this->asesoria_model->mensajes();
-        $this->load->view('datos_view_ase',$data);
-        //$this->load->view('includes/template',$data); 
+        //$this->load->view('datos_view_ase',$data);
+        $this->load->view('includes/template8',$data); 
     }
  
     //función encargada de mostrar los formularios por ajax
