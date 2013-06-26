@@ -19,8 +19,8 @@ class Logeo_model extends CI_Controller{
 
 		$query = $this->db->query($sql,array($a1,$a2));
                 //echo 'modelo';
-                printf($a1);
-                printf($a2);
+                //printf($a1);
+                //printf($a2);
                 
                 return $query->result_array();	
         }
