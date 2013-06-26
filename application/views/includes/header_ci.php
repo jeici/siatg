@@ -106,7 +106,7 @@
                         <ul>
                             <li><a href="<?php echo base_url();?>index.php/carrera/usuario">Agregar Carrera</a></li>
                             <li><a href="<?php echo base_url();?>index.php/carrera/seleccionar_carr">Modificar Carrera</a></li>
-                            <li><a href="<?php echo base_url();?>index.php/carrera/seleccionar_carr">Consultar Carrera</a></li>
+                            <li><a href="<?php echo base_url();?>index.php/carrera/consultar_carr">Consultar Carrera</a></li>
                            
                         </ul>
                     </li>
@@ -122,7 +122,7 @@
                     <li class="arrow"></li>
                     <li><a href="<?php echo base_url();?>index.php/nivel/usuario">Agregar Nivel</a></li>
                     <li><a href="<?php echo base_url();?>index.php/nivel/seleccionar_nivel">Modificar Nivel</a></li>
-                   <li><a href="<?php echo base_url();?>index.php/nivel/seleccionar_nivel">Consultar Nivel</a></li>
+                   <li><a href="<?php echo base_url();?>index.php/nivel/consultar_nivel">Consultar Nivel</a></li>
                    
                 </ul>
             </li>
