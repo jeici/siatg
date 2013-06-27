@@ -36,8 +36,10 @@
                 <div class="grid_2" id="head_nombre">C. Observ</div>
                 <div class="grid_1" id="head_apellido">Tema</div>
                 <div class="grid_1" id="head_nombre">Grupo.</div>
+                <div class="grid_2" id="head_apellido">Nota_Final</div>
                 <div class="grid_1" id="head_nombre">Cond.</div>
-                <div class="grid_2" id="head_apellido">Avance</div>
+                <div class="grid_1" id="head_apellido">Avance</div>
+                
                
             </div>
              
@@ -50,8 +52,10 @@
                 <div class="grid_2" id="nombre<?=$fila->id_trabajog?>"><?=$fila->obs_carnet?></div>
                 <div class="grid_1" id="email<?=$fila->id_trabajog?>"><?=$fila->tema?></div>
                 <div class="grid_1" id="nombre<?=$fila->id_trabajog?>"><?=$fila->grupo?></div>
+                <div class="grid_2" id="nombre<?=$fila->id_trabajog?>"><?=$fila->nota_final?></div>
                 <div class="grid_1" id="email<?=$fila->id_trabajog?>"><?=$fila->condicion?></div>
-                <div class="grid_2" id="nombre<?=$fila->id_trabajog?>"><?=$fila->avance?></div>
+                <div class="grid_1" id="nombre<?=$fila->id_trabajog?>"><?=$fila->avance?></div>
+                
                 
                 
                 
