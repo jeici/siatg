@@ -1,4 +1,4 @@
-<<?php
+<?php
 $this->load->view('includes/header'); //aqui creamos el encabezado
 $this->load->view('includes/header_ci2');
 //$this->load->view($main_content); //esta variable servira para pasar el contenido a la vista
