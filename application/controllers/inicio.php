@@ -7,7 +7,7 @@ class Inicio extends CI_Controller{
         $this->load->helper('form');
         $this->load->library('form_validation');
         $this->load->database();
-        $this->load->model('inicio_model');
+        
         
         
         
@@ -18,8 +18,10 @@ class Inicio extends CI_Controller{
     
     function usuario(){
         
-            $id_nivel=$this->inicio_model->agregar_inicio();
-            printf($nivel=$id_nivel[0]->id_nivel);
+            
+            //printf($this->session->userdata['nivel']);
+            //printf($this->session->userdata['nivel']);
+            $nivel=$this->session->userdata['nivel'];
            if ($nivel==1){
                
                     $data['title']='SISTEMA DE ADMINISTARCION DE TRABAJOS DE GRADUACION';//esta variable se imprime en el 
