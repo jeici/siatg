@@ -53,13 +53,13 @@ LOGEO
         ?>
 
 <form id="form2" name="form2" class="wufoo topLabel page" autocomplete="off" enctype="multipart/form-data" method="post" novalidate
-action="https://dark0685.wufoo.com.mx/forms/m7x4z5/#public">
+action="https://dark0685.wufoo.com.mx/forms/m7x4z5/#public" >
 
 <header id="header" class="info">
 <h2>INICIO DE SESION</h2>
-<div>Ingreso de Sistema SIATG</div>
+<div align="center">Ingreso de Sistema SIATG</div>
 </header>
-
+ <div align="center">
 <ul>
 
 
@@ -98,6 +98,7 @@ Password
 </li>
 
 </ul>
+</div>
 </form> 
 
 </div><!--container-->

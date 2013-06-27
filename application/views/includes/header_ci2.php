@@ -8,7 +8,7 @@
    
         <ul id="jMenu">
             <li>
-                <a class="fNiv">Administraci&oacute;n</a>
+                <a class="fNiv">Administración</a>
                 <ul>
                     <li class="arrow"></li>
                     <li>
@@ -22,34 +22,18 @@
                     </li>
                    </ul>  
                   </li> 
-                  <li>          
-                  <a class="fNiv">Usuarios</a>
-                <ul>
-                    <li class="arrow"></li>
-                    <li>
-                        <a>Usuarios</a>
-                        <ul>
-                            <li><a href="<?php echo base_url();?>index.php/usuario">Agregar Usuario</a></li>
-                            <li><a href="<?php echo base_url();?>index.php/usuario/seleccionar_tipo">Modificar Usuario</a></li>
-                            <li><a href="<?php echo base_url();?>index.php/usuario/buscar_usuario">Buscar Usuario</a></li>
-                            <li><a href="<?php echo base_url();?>index.php/usuario/seleccionar_tipo_consultar">Consultar Usuario</a></li>
-                           
-                            
-                        </ul>
-                    </li>
-                                   </ul>
-            </li>
+                 
 
             <li>
-                <a class="fNiv">Trabajos de Graduaci&oacute;n</a>
+                <a class="fNiv">Trabajos de Graduación</a>
                 <ul>
                     <li class="arrow"></li>
                     <li>
                         <a>Trabajos de Graduación</a>
                         <ul>
-                            <li><a href="<?php echo base_url();?>index.php/trabajograduacion/usuario">Agregar Trabajos de Graduaci&oacute;n</a></li>
-                            <li><a href="<?php echo base_url();?>index.php/trabajograduacion/seleccionar_tg">Modificar Trabajos de Graduaci&oacute;n</a></li>
-                            <li><a href="<?php echo base_url();?>index.php/trabajograduacion/consultar_tg">Consultar Trabajos de Graduaci&oacute;n</a></li>
+                            <li><a href="<?php echo base_url();?>index.php/trabajograduacion/usuario">Agregar Trabajos de Graduación</a></li>
+                            <li><a href="<?php echo base_url();?>index.php/trabajograduacion/seleccionar_tg">Modificar Trabajos de Graduación</a></li>
+                            <li><a href="<?php echo base_url();?>index.php/trabajograduacion/consultar_tg">Consultar Trabajos de Graduación</a></li>
                       <!--  <li><a>Category 3.3</a></li>
                             <li><a>Category 3.3</a></li>
                             <li><a>Category 3.3</a></li>
@@ -59,9 +43,9 @@
                     <li>
                         <a>Calificaciones</a>
                         <ul>
-                            <li><a href="<?php echo base_url();?>index.php/nota/usuario">Calificar Trabajo de Graduaci&oacute;n</a></li>
-                            <li><a >Modificar Calificaci&oacute;n</a></li>
-                            <li><a >Consultar Calificaci&oacute;n</a></li>
+                            <li><a href="<?php echo base_url();?>index.php/nota/usuario">Calificar Trabajo de Graduación</a></li>
+                            <li><a >Modificar Calificación</a></li>
+                            <li><a >Consultar Calificación</a></li>
                         </ul>
                     </li>
                     <li><a>Asesoria</a></li>
@@ -98,38 +82,7 @@
                 </ul>
             </li>
 
-            <li>
-                <a class="fNiv">Carrera</a>
-                <ul>
-                    <li class="arrow"></li>
-                    <li>
-                        <a>Carrera</a>
-                        <ul>
-                            <li><a href="<?php echo base_url();?>index.php/carrera/usuario">Agregar Carrera</a></li>
-                            <li><a href="<?php echo base_url();?>index.php/carrera/seleccionar_carr">Modificar Carrera</a></li>
-                            <li><a href="<?php echo base_url();?>index.php/carrera/consultar_carr">Consultar Carrera</a></li>
-                           
-                        </ul>
-                    </li>
-                    
-                </ul>
-            </li>
-
-            
-
-            <li>
-                <a class="fNiv">Nivel</a>
-                <ul>
-                    <li class="arrow"></li>
-                    <li><a href="<?php echo base_url();?>index.php/nivel/usuario">Agregar Nivel</a></li>
-                    <li><a href="<?php echo base_url();?>index.php/nivel/seleccionar_nivel">Modificar Nivel</a></li>
-                   <li><a href="<?php echo base_url();?>index.php/nivel/consultar_nivel">Consultar Nivel</a></li>
-                   
-                </ul>
-            </li>
-            <li><a class="fNiv"></a></li>
-            
-            <li>
+               <li>
                 <a class="fNiv">Asesoria</a>
                 <ul>
                     <li class="arrow"></li>
@@ -139,7 +92,7 @@
                    
                 </ul>
             </li>
-            <li><a class="fNiv"></a></li>
+          
             
             <li>
                 <a class="fNiv">Cerrar Sesi&oacute;n</a>
@@ -150,7 +103,7 @@
                    
                 </ul>
             </li>
-            <li><a class="fNiv"></a></li>
+            
             
         </ul>
 
