@@ -1,7 +1,13 @@
 <?php
 // agrego la variable item para que me cargue el dropbox dentro de main_content de usuario
 $this->load->view('includes/header'); //aqui creamos el encabezado
+$nivel=$this->session->userdata['nivel'];
+if($nivel==1){
 $this->load->view('includes/header_ci');
+}
+else{
+    $this->load->view('includes/header_ci2');
+}
 $llenado['id']=$id;
 $llenado['tipo']=$tipo;
 $llenado['user']=$user;
