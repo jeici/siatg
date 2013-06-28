@@ -39,7 +39,7 @@ class Usuario extends CI_Controller{
 		$this->load->view('includes/templatem',$data);
 
 
-		// $data['main_content']='contenido2';// este array hace referencia a la variable $main_content del template.php
+		//  $data['main_content']='contenido2';// este array hace referencia a la variable $main_content del template.php
 		// $data['title']='SISTEMA DE ADMINISTARCION DE TRABAJOS DE GRADUACION';//esta variable se imprime en el header en el tag title
 		//$this->load->view('includes/template',$data);
 	}

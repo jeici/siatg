@@ -14,7 +14,7 @@ class Usuario_model extends CI_Controller{
 		
 		$sql= "SELECT prc_ins_usuario(?,?,?,?,?,?,?,?,?,?,?);";
 
-		/*if($tipo==1){
+		/* if($tipo==1){
 			$nivel=1;
 		}else{
 			$nivel=2;

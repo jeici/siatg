@@ -13,7 +13,7 @@ else{
 
 $this->load->view($main_content);
 
-$this->load->view('includes/footer');//esta variable carga el footer en la vista
+$this->load->view('includes/footer');// esta variable carga el footer en la vista
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.

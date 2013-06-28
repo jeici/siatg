@@ -11,7 +11,7 @@ else{
 }
 $llenado['carrer']=$carrer;
 $llenado['nvel']=$nvel;
-$this->load->view($main_content,$llenado); //esta variable servira para pasar el contenido a la vista
+$this->load->view($main_content,$llenado); // esta variable servira para pasar el contenido a la vista
 $this->load->view('includes/footer');//esta variable carga el footer en la vista
 /*
  * To change this template, choose Tools | Templates
