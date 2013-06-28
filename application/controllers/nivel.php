@@ -51,6 +51,7 @@ class Nivel extends CI_Controller{
             
             $tip = $this->input->post('tipo');
             $this->nivel_model->agregar_nivel($tip);
+            redirect(base_url("/index.php/nivel/usuario"));
         }  
         
         

@@ -103,9 +103,9 @@ $opciones = array(
 
 );
 
-$data_carrera=$item;//recupero el array aqui.
+$data_carrera=$carrer;//recupero el array aqui.
 
-$data_nivel=$nivel;//llenar el array de niveles.
+$data_nivel=$nvel;//llenar el array de niveles.
 
 
 

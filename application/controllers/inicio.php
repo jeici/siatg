@@ -21,8 +21,8 @@ class Inicio extends CI_Controller{
             
             //printf($this->session->userdata['nivel']);
             //printf($this->session->userdata['nivel']);
-            $nivel=$this->session->userdata['nivel'];
-           if ($nivel==1){
+            $niv=$this->session->userdata['niv'];
+           if ($niv==1){
                
                     $data['title']='SISTEMA DE ADMINISTARCION DE TRABAJOS DE GRADUACION';//esta variable se imprime en el 
             //header en el tag title
@@ -37,7 +37,7 @@ class Inicio extends CI_Controller{
             $this->load->view('includes/template',$data);
                
            } 
-           if ($nivel==2)
+           if ($niv==2)
            {
                $data['title']='SISTEMA DE ADMINISTARCION DE TRABAJOS DE GRADUACION';//esta variable se imprime en el 
             //header en el tag title

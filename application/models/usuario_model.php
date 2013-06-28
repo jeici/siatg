@@ -39,21 +39,21 @@ class Usuario_model extends CI_Controller{
 	
 	function obtener_carrera(){
 	$query= $this->db->query("SELECT * FROM carrera;");
-		$item=array();
+		$carrer=array();
 		foreach ($query->result_array() as $campo){
-			$item[$campo['id_carrera']]=$campo['nombre_carrera'];	//darle formato al array para que me funcione con el dropbox	
+			$carrer[$campo['id_carrera']]=$campo['nombre_carrera'];	//darle formato al array para que me funcione con el dropbox	
 		}
 
-		return $item;
+		return $carrer;
 	}
 	
 	function obtener_nivel(){
 		$query=$this->db->query("SELECT * FROM nivel;");
-		$niveles=array();
+		$nvel=array();
 		foreach($query->result_array() as $campo){
-			$niveles[$campo['id_nivel']]=$campo['tipo'];
+			$nvel[$campo['id_nivel']]=$campo['tipo'];
 		}
-		return $niveles;
+		return $nvel;
 	}
 	
 	//obtiene todos los admin
@@ -162,7 +162,7 @@ class Usuario_model extends CI_Controller{
 		$item=array();
 	
 		foreach ($query->result_array() as $campo){
-			$item[$campo['nombre_carrera']]=$campo['nombre_carrera'];	//darle formato al array para que me funcione con el dropbox
+			$item[$campo['id_carrera']]=$campo['nombre_carrera'];	//darle formato al array para que me funcione con el dropbox
 		}
 	
 		return $item;
@@ -172,7 +172,7 @@ class Usuario_model extends CI_Controller{
 		$query=$this->db->query("SELECT * FROM nivel;");
 		$niveles=array();
 		foreach($query->result_array() as $campo){
-			$niveles[$campo['tipo']]=$campo['tipo'];
+			$niveles[$campo['id_nivel']]=$campo['tipo'];
 		}
 		return $niveles;
 	}

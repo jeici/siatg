@@ -59,7 +59,7 @@ class Trabajograduacion extends CI_Controller{
             
             $this->load->model('trabajog_model');
             echo 'correcto';
-            $a1 = $this->input->post('asesor');
+            printf($a1 = $this->input->post('asesor'));
             $a2 = $this->input->post('observador');
             $a3 = $this->input->post('tema');
             $a4 = $this->input->post('grupo');

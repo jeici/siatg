@@ -28,15 +28,15 @@ class Usuario extends CI_Controller{
 	function index(){
 		
 		//obtengo los id y nombres de la carrera
-		$item=$this->usuario->obtener_busqueda_carrera();
-		$niveles=$this->usuario->obtener_busqueda_nivel();
+		$carrer=$this->usuario->obtener_busqueda_carrera();
+		$nvel=$this->usuario->obtener_busqueda_nivel();
 		$data['title']='SISTEMA DE ADMINISTRACION DE TRABAJOS DE GRADUACION';//esta variable se imprime en el
 		//header en el tag title
 		$data['main_content']='form_usuario';
 		$data['title']='Ingresar Usuario';
-		$data['item']=$item; //asigno el array dentro de la variable data
-		$data['nivel']=$niveles; //asigno el array nivel dentro de la variable data
-		$this->load->view('includes/template2',$data);
+		$data['carrer']=$carrer; //asigno el array dentro de la variable data
+		$data['nvel']=$nvel; //asigno el array nivel dentro de la variable data
+		$this->load->view('includes/templatem',$data);
 
 
 		// $data['main_content']='contenido2';// este array hace referencia a la variable $main_content del template.php
@@ -46,19 +46,7 @@ class Usuario extends CI_Controller{
 	function datosenviados(){
 		print_r($_POST);
 	}
-	function ingresar_usuario(){
-		$item=$this->usuario->obtener_carrera();
-		$niveles=$this->usuario->obtener_nivel();
-		$data['title']='SISTEMA DE ADMINISTRACION DE TRABAJOS DE GRADUACION';//esta variable se imprime en el
-		//header en el tag title
-		$data['main_content']='form_usuario';
-		$data['title']='Ingresar Usuario';
-		$data['item']=$item; //asigno el array dentro de la variable data
-		$data['nivel']=$niveles; //asigno el array nivel dentro de la variable data
-		$this->load->view('includes/template2',$data);
-
-	}
-
+	
 	function guardar_usuario()
 	{
 		$nombre = $this->input->post('nombres');

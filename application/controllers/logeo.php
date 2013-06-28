@@ -53,13 +53,13 @@ class Logeo extends CI_Controller{
                    $sesion_data = array(
                                     'username' => $_POST['username'],
                                     'password' => $_POST['password'],
-                                    'nivel' => $nivel
+                                    'niv' => $nivel
                                         );
                     $this->session->set_userdata($sesion_data);
                
                 $data['username'] = $this->session->userdata['username'];
                 $data['password'] = $this->session->userdata['password'];
-                $data['nivel'] = $this->session->userdata['nivel'];
+                $data['niv'] = $this->session->userdata['niv'];
                 
                    
                 $this->load->view('login_success',$data); 
