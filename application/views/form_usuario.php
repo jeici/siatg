@@ -87,6 +87,7 @@ $data_nick= array(
 $data_pass=array(
 	'name' 		=> 'pass',
 	'id'   		=> 'id_pass',
+        'type'          => 'password',
 	'value' 	=> set_value('pass'),
 	'maxlength' => '15',
 	'size' 		=> '15',
@@ -99,7 +100,7 @@ $data_options = array(
 );
 $opciones = array(
 		1  => 'DBA',
-		2  => 'ADMINISTRADOR',
+		2  => 'ADMIN',
 
 );
 
