@@ -17,7 +17,7 @@ class Inicio extends CI_Controller{
     }
     
     function usuario(){
-        
+        //separa administradores de dba
             
             //printf($this->session->userdata['nivel']);
             //printf($this->session->userdata['nivel']);

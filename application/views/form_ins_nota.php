@@ -1,5 +1,5 @@
 <title>
-Trabajo de Graduacion
+NOTAS
 </title>
 
 <!-- Meta Tags -->
@@ -47,8 +47,8 @@ Trabajo de Graduacion
 action="https://dark0685.wufoo.com.mx/forms/m7x4z5/#public">
 
 <header id="header" class="info">
-<h2>Trabajo de Graduacion</h2>
-<div>Ingreso de trabajos de graduacion</div>
+<h2>Notas</h2>
+<div>Ingreso de notas</div>
 </header>
 
 <ul>

@@ -77,7 +77,7 @@ $('#datepicker').datepicker('option', {dateFormat: 'yy/mm/dd'});
               
               'placeholder' => 'Digite el Título',
             );
-       /* $data_tg = array(
+        $data_tg = array(
               'name'        => 'tg',
               'id'          => 'id_tg',
               'value'       => set_value('tg'),
@@ -85,7 +85,7 @@ $('#datepicker').datepicker('option', {dateFormat: 'yy/mm/dd'});
               'size'        => '50',
               
               'placeholder' => 'Digite el ID de trabajo de Graduación',
-            );*/
+            );
         $data_tg=$item;//recupero el array aqui.
       $data_carrera=$item2;//recupero el array aqui.
         ?>

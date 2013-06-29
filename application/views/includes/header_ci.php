@@ -64,7 +64,7 @@
                             <li><a >Consultar Calificaci&oacute;n</a></li>
                         </ul>
                     </li>
-                    <li><a>Asesoria</a></li>
+                    
                   
                 </ul>
             </li>
@@ -84,7 +84,7 @@
                            <!-- <li><a>Category 4.3</a></li>-->
                         </ul>
                     </li>
-                    <li><a>Local</a>
+                    
                     <ul>
                             <li><a>Asignar Local</a></li>
                             <li><a>Cambiar Local</a></li>

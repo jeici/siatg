@@ -48,14 +48,15 @@ class Logeo extends CI_Controller{
                
                if($log != null)
                {
-                   $nivel= $log[0]->id_nivel;
+                   $nivel= $log[0]->id_nivel;//variable para perfiles
                    
                    $sesion_data = array(
                                     'username' => $_POST['username'],
                                     'password' => $_POST['password'],
                                     'niv' => $nivel
                                         );
-                    $this->session->set_userdata($sesion_data);
+                    $this->session->set_userdata($sesion_data);//esto activa 
+                    //variables de sesion
                
                 $data['username'] = $this->session->userdata['username'];
                 $data['password'] = $this->session->userdata['password'];
