@@ -16,7 +16,7 @@
  *     production
  *
  * NOTE: If you change these, also change the error_reporting() code below
- *
+ * prueba
  */
 	define('ENVIRONMENT', 'development');
 /*
